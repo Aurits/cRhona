@@ -654,6 +654,7 @@
               </a>
             </li>
             <li>
+              <a href="/super_admin/workspace.html">
               <span
                 class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
               >
@@ -661,7 +662,9 @@
                 <span class="ml-3 hidden md:block">Project Workspace</span>
               </span>
             </li>
+            </a>
             <li>
+              <a href="/super_admin/templates.html">
               <span
                 class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
               >
@@ -670,8 +673,10 @@
                 ></i>
                 <span class="ml-3 hidden md:block">Templates</span>
               </span>
+              </a>
             </li>
             <li>
+              <a href="/super_admin/reviewer-portal.html">
               <span
                 class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
               >
@@ -684,8 +689,10 @@
                   >2</span
                 >
               </span>
+              </a>
             </li>
             <li>
+              <a href="/super_admin/output.html">
               <span
                 class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
               >
@@ -694,14 +701,17 @@
                   >Final Output & Evaluation</span
                 >
               </span>
+              </a>
             </li>
             <li>
+              <a href="/super_admin/settings.html">
               <span
                 class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
               >
                 <i class="fa-solid fa-gear w-6 text-center text-lg"></i>
                 <span class="ml-3 hidden md:block">Settings</span>
               </span>
+              </a>
             </li>
           </ul>
         </div>
@@ -781,216 +791,132 @@
           </div>
         </header>
 
-      <!-- Main Content with Sidebar Margin -->
-      <div id="users-content" class="pt-[80px] px-6 py-8">
-        <div class="max-w-7xl mx-auto">
-          <!-- Page Title -->
-          <div class="mb-8">
-            <h1 class="text-2xl text-neutral-900">User Management</h1>
-            <p class="text-neutral-600 mt-1">
-              Manage system users, permissions and roles.
-            </p>
-          </div>
+  <!-- Main Content -->
+  <main id="access-roles" class="pt-[80px] px-6 py-8 w-full">
+    <div class="max-w-5xl mx-auto">
+      <!-- Header -->
+      <div class="mb-8">
+        <h1 class="text-2xl mb-2">Access Roles Management</h1>
+        <p class="text-neutral-600">Manage system access and permissions for all users</p>
+      </div>
 
-          <!-- Action Bar -->
-          <div class="mb-8 flex justify-between items-center">
-            <div class="flex items-center space-x-4">
-              <input
-                type="search"
-                placeholder="Search users..."
-                class="px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-neutral-300 focus:outline-none"
-              />
-              <select
-                class="px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-neutral-300 focus:outline-none"
-              >
-                <option value="">All Roles</option>
-                <option value="admin">Admin</option>
-                <option value="reviewer">Reviewer</option>
-                <option value="contributor">Contributor</option>
-              </select>
-            </div>
-            <button
-              class="px-4 py-2 bg-neutral-900 text-white rounded-md flex items-center"
-            >
-              <i class="fa-solid fa-user-plus mr-2"></i>
-              <span>Add New User</span>
+      <!-- Role Management Section -->
+      <div class="bg-white rounded-lg border border-neutral-200 mb-6">
+        <div class="p-6 border-b border-neutral-200">
+          <div class="flex justify-between items-center">
+            <h2 class="text-xl">System Users</h2>
+            <button class="px-4 py-2 bg-neutral-900 text-white rounded-lg hover:bg-neutral-800">
+              <i class="fa-solid fa-plus mr-2"></i>Add User
             </button>
           </div>
+        </div>
 
-          <!-- Users Table -->
-          <div class="bg-white rounded-lg border border-neutral-200 shadow-sm">
-            <div class="p-6">
-              <table class="w-full">
-                <thead>
-                  <tr class="border-b border-neutral-200">
-                    <th class="text-left pb-4 text-neutral-600">User</th>
-                    <th class="text-left pb-4 text-neutral-600">Email</th>
-                    <th class="text-left pb-4 text-neutral-600">Role</th>
-                    <th class="text-left pb-4 text-neutral-600">Status</th>
-                    <th class="text-left pb-4 text-neutral-600">Actions</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-neutral-200">
-                  <tr class="hover:bg-neutral-50">
-                    <td class="py-4">
-                      <div class="flex items-center">
-                        <img
-                          src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=111"
-                          alt="Peter Claver"
-                          class="w-8 h-8 rounded-full mr-3"
-                        />
-                        <span class="text-neutral-900">Peter Claver</span>
-                      </div>
-                    </td>
-                    <td class="py-4 text-neutral-600">peter@crhona.com</td>
-                    <td class="py-4">
-                      <span
-                        class="px-2 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
-                        >System Admin</span
-                      >
-                    </td>
-                    <td class="py-4">
-                      <span
-                        class="px-2 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
-                        >Active</span
-                      >
-                    </td>
-                    <td class="py-4">
-                      <div class="flex space-x-2">
-                        <button
-                          class="p-2 text-neutral-600 hover:text-neutral-900"
-                        >
-                          <i class="fa-solid fa-pen-to-square"></i>
-                        </button>
-                        <button
-                          class="p-2 text-neutral-600 hover:text-neutral-900"
-                        >
-                          <i class="fa-solid fa-key"></i>
-                        </button>
-                        <button
-                          class="p-2 text-neutral-600 hover:text-neutral-900"
-                        >
-                          <i class="fa-solid fa-trash"></i>
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="hover:bg-neutral-50">
-                    <td class="py-4">
-                      <div class="flex items-center">
-                        <img
-                          src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=222"
-                          alt="Mary Vanessa"
-                          class="w-8 h-8 rounded-full mr-3"
-                        />
-                        <span class="text-neutral-900">Mary Vanessa</span>
-                      </div>
-                    </td>
-                    <td class="py-4 text-neutral-600">mary@crhona.com</td>
-                    <td class="py-4">
-                      <span
-                        class="px-2 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
-                        >Reviewer</span
-                      >
-                    </td>
-                    <td class="py-4">
-                      <span
-                        class="px-2 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
-                        >Active</span
-                      >
-                    </td>
-                    <td class="py-4">
-                      <div class="flex space-x-2">
-                        <button
-                          class="p-2 text-neutral-600 hover:text-neutral-900"
-                        >
-                          <i class="fa-solid fa-pen-to-square"></i>
-                        </button>
-                        <button
-                          class="p-2 text-neutral-600 hover:text-neutral-900"
-                        >
-                          <i class="fa-solid fa-key"></i>
-                        </button>
-                        <button
-                          class="p-2 text-neutral-600 hover:text-neutral-900"
-                        >
-                          <i class="fa-solid fa-trash"></i>
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="hover:bg-neutral-50">
-                    <td class="py-4">
-                      <div class="flex items-center">
-                        <img
-                          src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=333"
-                          alt="Ambrose Alanda"
-                          class="w-8 h-8 rounded-full mr-3"
-                        />
-                        <span class="text-neutral-900">Ambrose Alanda</span>
-                      </div>
-                    </td>
-                    <td class="py-4 text-neutral-600">ambrose@crhona.com</td>
-                    <td class="py-4">
-                      <span
-                        class="px-2 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
-                        >Contributor</span
-                      >
-                    </td>
-                    <td class="py-4">
-                      <span
-                        class="px-2 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
-                        >Pending</span
-                      >
-                    </td>
-                    <td class="py-4">
-                      <div class="flex space-x-2">
-                        <button
-                          class="p-2 text-neutral-600 hover:text-neutral-900"
-                        >
-                          <i class="fa-solid fa-pen-to-square"></i>
-                        </button>
-                        <button
-                          class="p-2 text-neutral-600 hover:text-neutral-900"
-                        >
-                          <i class="fa-solid fa-key"></i>
-                        </button>
-                        <button
-                          class="p-2 text-neutral-600 hover:text-neutral-900"
-                        >
-                          <i class="fa-solid fa-trash"></i>
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+        <!-- Users Table -->
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead class="bg-neutral-50 border-b border-neutral-200">
+              <tr>
+                <th class="text-left p-4">User</th>
+                <th class="text-left p-4">Role</th>
+                <th class="text-left p-4">Email</th>
+                <th class="text-left p-4">Status</th>
+                <th class="text-left p-4">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-neutral-100">
+                <td class="p-4">
+                  <div class="flex items-center gap-3">
+                    <img src="https://api.dicebear.com/7.x/notionists/svg?seed=123" class="w-8 h-8 rounded-full">
+                    <span>Peter Claver</span>
+                  </div>
+                </td>
+                <td class="p-4"><span class="px-2 py-1 bg-neutral-100 rounded-full text-sm">System Admin</span></td>
+                <td class="p-4">peter.claver@crhona.com</td>
+                <td class="p-4"><span class="text-neutral-600">Active</span></td>
+                <td class="p-4">
+                  <button class="text-neutral-600 hover:text-neutral-900"><i class="fa-solid fa-ellipsis"></i></button>
+                </td>
+              </tr>
+              <tr class="border-b border-neutral-100">
+                <td class="p-4">
+                  <div class="flex items-center gap-3">
+                    <img src="https://api.dicebear.com/7.x/notionists/svg?seed=456" class="w-8 h-8 rounded-full">
+                    <span>Ambrose Alanda</span>
+                  </div>
+                </td>
+                <td class="p-4"><span class="px-2 py-1 bg-neutral-100 rounded-full text-sm">Reviewer</span></td>
+                <td class="p-4">ambrose.alanda@crhona.com</td>
+                <td class="p-4"><span class="text-neutral-600">Active</span></td>
+                <td class="p-4">
+                  <button class="text-neutral-600 hover:text-neutral-900"><i class="fa-solid fa-ellipsis"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-4">
+                  <div class="flex items-center gap-3">
+                    <img src="https://api.dicebear.com/7.x/notionists/svg?seed=789" class="w-8 h-8 rounded-full">
+                    <span>Mary Vanessa</span>
+                  </div>
+                </td>
+                <td class="p-4"><span class="px-2 py-1 bg-neutral-100 rounded-full text-sm">Contributor</span></td>
+                <td class="p-4">mary.vanessa@crhona.com</td>
+                <td class="p-4"><span class="text-neutral-600">Pending</span></td>
+                <td class="p-4">
+                  <button class="text-neutral-600 hover:text-neutral-900"><i class="fa-solid fa-ellipsis"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-          <!-- Pagination -->
-          <div class="mt-6 flex items-center justify-between">
-            <div class="text-sm text-neutral-600">
-              Showing 1 to 3 of 3 entries
+      <!-- Role Permissions Matrix -->
+      <div class="bg-white rounded-lg border border-neutral-200">
+        <div class="p-6 border-b border-neutral-200">
+          <h2 class="text-xl">Role Permissions</h2>
+        </div>
+        <div class="p-6">
+          <div class="grid grid-cols-4 gap-4">
+            <div class="p-4 border border-neutral-200 rounded-lg">
+              <h3 class="mb-3">System Admin</h3>
+              <ul class="space-y-2 text-sm text-neutral-600">
+                <li><i class="fa-solid fa-check mr-2"></i>Full system access</li>
+                <li><i class="fa-solid fa-check mr-2"></i>User management</li>
+                <li><i class="fa-solid fa-check mr-2"></i>Role assignment</li>
+                <li><i class="fa-solid fa-check mr-2"></i>System settings</li>
+              </ul>
             </div>
-            <div class="flex space-x-2">
-              <button
-                class="px-3 py-1 border border-neutral-300 rounded-md text-neutral-600 disabled:opacity-50"
-              >
-                Previous
-              </button>
-              <button class="px-3 py-1 bg-neutral-900 text-white rounded-md">
-                1
-              </button>
-              <button
-                class="px-3 py-1 border border-neutral-300 rounded-md text-neutral-600 disabled:opacity-50"
-              >
-                Next
-              </button>
+            <div class="p-4 border border-neutral-200 rounded-lg">
+              <h3 class="mb-3">Team Lead</h3>
+              <ul class="space-y-2 text-sm text-neutral-600">
+                <li><i class="fa-solid fa-check mr-2"></i>Project management</li>
+                <li><i class="fa-solid fa-check mr-2"></i>Team assignment</li>
+                <li><i class="fa-solid fa-check mr-2"></i>Review workflows</li>
+              </ul>
+            </div>
+            <div class="p-4 border border-neutral-200 rounded-lg">
+              <h3 class="mb-3">Reviewer</h3>
+              <ul class="space-y-2 text-sm text-neutral-600">
+                <li><i class="fa-solid fa-check mr-2"></i>Review access</li>
+                <li><i class="fa-solid fa-check mr-2"></i>Comment access</li>
+                <li><i class="fa-solid fa-check mr-2"></i>Limited editing</li>
+              </ul>
+            </div>
+            <div class="p-4 border border-neutral-200 rounded-lg">
+              <h3 class="mb-3">Contributor</h3>
+              <ul class="space-y-2 text-sm text-neutral-600">
+                <li><i class="fa-solid fa-check mr-2"></i>View access</li>
+                <li><i class="fa-solid fa-check mr-2"></i>Submit content</li>
+                <li><i class="fa-solid fa-check mr-2"></i>Basic interaction</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
-</html>
+  </main>
+</div>
+              </body>
+            </html>
+          
