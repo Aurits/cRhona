@@ -602,7 +602,9 @@
                 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
               ></path>
             </svg>
-            <span class="ml-2 text-neutral-900 hidden md:block">cRhona</span>
+            <a href="/index.html">
+              <span class="ml-2 text-neutral-900 hidden md:block">cRhona</span>
+            </a>
           </div>
           <button
             class="hidden md:flex items-center justify-center p-2 rounded-md text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100"
@@ -615,30 +617,92 @@
         <div class="flex-1 overflow-y-auto py-4">
           <ul class="space-y-1">
             <li>
+              <a href="/super_admin/dashboard.html">
+                <span
+                  class="flex items-center px-3 py-3 text-neutral-900 bg-neutral-100 border-l-2 border-neutral-900 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
+                >
+                  <i class="fa-solid fa-chart-line w-6 text-center text-lg"></i>
+
+                  <span class="ml-3 hidden md:block">Dashboard</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="/super_admin/users.html">
+                <span
+                  class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
+                >
+                  <i class="fa-solid fa-users-gear w-6 text-center text-lg"></i>
+                  <span class="ml-3 hidden md:block">Users</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="/super_admin/teams.html">
+                <span
+                  class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
+                >
+                  <i
+                    class="fa-solid fa-people-group w-6 text-center text-lg"
+                  ></i>
+                  <span class="ml-3 hidden md:block">Teams</span>
+                  <span
+                    class="ml-auto hidden md:flex items-center justify-center w-5 h-5 bg-neutral-900 text-white text-xs rounded-full"
+                    >3</span
+                  >
+                </span>
+              </a>
+            </li>
+            <li>
               <span
                 class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
               >
-                <i class="fa-solid fa-chart-line w-6 text-center text-lg"></i>
-                <span class="ml-3 hidden md:block">Dashboard</span>
+                <i class="fa-solid fa-briefcase w-6 text-center text-lg"></i>
+                <span class="ml-3 hidden md:block">Project Workspace</span>
               </span>
             </li>
             <li>
               <span
                 class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
               >
-                <i class="fa-solid fa-users-gear w-6 text-center text-lg"></i>
-                <span class="ml-3 hidden md:block">Users</span>
+                <i
+                  class="fa-solid fa-clipboard-list w-6 text-center text-lg"
+                ></i>
+                <span class="ml-3 hidden md:block">Templates</span>
               </span>
             </li>
             <li>
               <span
-                class="flex items-center px-3 py-3 text-neutral-900 bg-neutral-100 border-l-2 border-neutral-900 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
+                class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
               >
-                <i class="fa-solid fa-people-group w-6 text-center text-lg"></i>
-                <span class="ml-3 hidden md:block">Teams</span>
+                <i
+                  class="fa-solid fa-magnifying-glass-chart w-6 text-center text-lg"
+                ></i>
+                <span class="ml-3 hidden md:block">Reviewer Portal</span>
+                <span
+                  class="ml-auto hidden md:flex items-center justify-center w-5 h-5 bg-neutral-900 text-white text-xs rounded-full"
+                  >2</span
+                >
               </span>
             </li>
-            <!-- ... rest of sidebar items -->
+            <li>
+              <span
+                class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
+              >
+                <i class="fa-solid fa-file-export w-6 text-center text-lg"></i>
+                <span class="ml-3 hidden md:block"
+                  >Final Output & Evaluation</span
+                >
+              </span>
+            </li>
+            <li>
+              <span
+                class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
+              >
+                <i class="fa-solid fa-gear w-6 text-center text-lg"></i>
+                <span class="ml-3 hidden md:block">Settings</span>
+              </span>
+            </li>
           </ul>
         </div>
 
@@ -718,7 +782,7 @@
         </header>
 
         <!-- Existing Teams Content -->
-        <div id="teams-content" class="pt-[72px] px-6 py-8">
+        <div id="teams-content" class="pt-[80px] px-6 py-8">
           <div class="max-w-7xl mx-auto">
             <!-- Page Header -->
             <div class="flex justify-between items-center mb-8">
