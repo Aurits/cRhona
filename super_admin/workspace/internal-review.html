@@ -588,17 +588,17 @@
               <div class="flex items-center">
                 <span
                   class="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-900 text-white"
-                  >10</span
+                  >11</span
                 >
                 <div class="ml-3">
-                  <h2 class="text-lg text-neutral-900">Draft Builder</h2>
-                  <p class="text-sm text-neutral-600">Step 10 of 12</p>
+                  <h2 class="text-lg text-neutral-900">Review</h2>
+                  <p class="text-sm text-neutral-600">Step 11 of 12</p>
                 </div>
               </div>
               <div class="flex space-x-2">
                 <span
                   class="px-3 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
-                  >Draft v1.0</span
+                  >Under Review</span
                 >
               </div>
             </div>
@@ -607,108 +607,144 @@
             <div class="mt-4 h-2 bg-neutral-200 rounded-full">
               <div
                 class="h-2 bg-neutral-900 rounded-full"
-                style="width: 66.67%"
+                style="width: 75%"
               ></div>
             </div>
           </div>
 
-          <!-- Template Builder -->
-          <div class="space-y-6">
-            <!-- Executive Summary -->
-            <div class="bg-white rounded-lg border border-neutral-200 p-6">
-              <label class="block text-sm text-neutral-700 mb-4"
-                >Executive Summary</label
-              >
-              <div class="prose max-w-none">
-                <textarea
-                  class="w-full p-4 border border-neutral-300 rounded-md min-h-[200px]"
-                  placeholder="Write your executive summary..."
-                ></textarea>
+          <!-- Review Sections -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Internal Review -->
+            <div class="space-y-6">
+              <div class="bg-white rounded-lg border border-neutral-200 p-6">
+                <h3 class="text-lg mb-4">Internal Review</h3>
+
+                <!-- Review Checklist -->
+                <div class="space-y-4">
+                  <div class="flex items-start space-x-3">
+                    <input type="checkbox" class="mt-1" />
+                    <div>
+                      <label class="block text-sm"
+                        >Research Question Alignment</label
+                      >
+                      <textarea
+                        class="mt-2 w-full p-3 border border-neutral-200 rounded-md"
+                        rows="2"
+                        placeholder="Add comments..."
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start space-x-3">
+                    <input type="checkbox" class="mt-1" />
+                    <div>
+                      <label class="block text-sm"
+                        >Methodology Assessment</label
+                      >
+                      <textarea
+                        class="mt-2 w-full p-3 border border-neutral-200 rounded-md"
+                        rows="2"
+                        placeholder="Add comments..."
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start space-x-3">
+                    <input type="checkbox" class="mt-1" />
+                    <div>
+                      <label class="block text-sm">Evidence Quality</label>
+                      <textarea
+                        class="mt-2 w-full p-3 border border-neutral-200 rounded-md"
+                        rows="2"
+                        placeholder="Add comments..."
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Overall Assessment -->
+                <div class="mt-6">
+                  <label class="block text-sm mb-2">Overall Assessment</label>
+                  <select
+                    class="w-full p-2 border border-neutral-200 rounded-md"
+                  >
+                    <option>Select Assessment</option>
+                    <option>Approve</option>
+                    <option>Minor Revision</option>
+                    <option>Major Revision</option>
+                    <option>Reject</option>
+                  </select>
+                </div>
               </div>
             </div>
 
-            <!-- Problem Definition -->
-            <div class="bg-white rounded-lg border border-neutral-200 p-6">
-              <label class="block text-sm text-neutral-700 mb-4"
-                >Problem Definition</label
-              >
-              <div class="prose max-w-none">
-                <textarea
-                  class="w-full p-4 border border-neutral-300 rounded-md min-h-[150px]"
-                  placeholder="Define the problem..."
-                ></textarea>
-              </div>
-            </div>
+            <!-- External Review -->
+            <div class="space-y-6">
+              <div class="bg-white rounded-lg border border-neutral-200 p-6">
+                <h3 class="text-lg mb-4">External Review</h3>
 
-            <!-- Key Findings -->
-            <div class="bg-white rounded-lg border border-neutral-200 p-6">
-              <div class="flex justify-between items-center mb-4">
-                <label class="block text-sm text-neutral-700"
-                  >Key Findings</label
-                >
-                <button class="text-neutral-600 hover:text-neutral-900">
-                  <i class="fa-solid fa-plus"></i>
-                </button>
-              </div>
-              <div class="space-y-3">
-                <div class="flex items-start space-x-3">
-                  <div class="flex-shrink-0 mt-1">
-                    <i class="fa-solid fa-grip-vertical text-neutral-400"></i>
+                <!-- Reviewer Details -->
+                <div class="flex items-center space-x-3 mb-6">
+                  <img
+                    src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=345"
+                    class="w-10 h-10 rounded-full"
+                  />
+                  <div>
+                    <p>Dr. Mary Vanessa</p>
+                    <p class="text-sm text-neutral-600">External Reviewer</p>
                   </div>
-                  <textarea
-                    class="flex-1 p-3 border border-neutral-300 rounded-md"
-                    rows="2"
-                  >
-Finding 1: Implementation of evidence-based interventions showed positive outcomes across 75% of studies.</textarea
-                  >
                 </div>
-                <div class="flex items-start space-x-3">
-                  <div class="flex-shrink-0 mt-1">
-                    <i class="fa-solid fa-grip-vertical text-neutral-400"></i>
-                  </div>
-                  <textarea
-                    class="flex-1 p-3 border border-neutral-300 rounded-md"
-                    rows="2"
-                  >
-Finding 2: Cost-effectiveness analysis indicates potential savings of 30% in resource allocation.</textarea
-                  >
-                </div>
-              </div>
-            </div>
 
-            <!-- Policy Options -->
-            <div class="bg-white rounded-lg border border-neutral-200 p-6">
-              <label class="block text-sm text-neutral-700 mb-4"
-                >Policy Options</label
-              >
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div
-                  class="border border-neutral-200 rounded-lg p-4 cursor-move"
-                >
-                  <div class="flex justify-between items-center mb-2">
-                    <span>Option A</span>
-                    <i class="fa-solid fa-grip-vertical text-neutral-400"></i>
+                <!-- Email Invitation -->
+                <div class="bg-neutral-50 p-4 rounded-lg mb-6">
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="text-sm">Review Invitation</span>
+                    <span class="text-sm text-neutral-600"
+                      >Sent on April 15, 2025</span
+                    >
                   </div>
-                  <textarea
-                    class="w-full p-3 border border-neutral-300 rounded-md"
-                    rows="3"
-                  >
-Implement comprehensive monitoring system</textarea
-                  >
+                  <div class="flex items-center space-x-2">
+                    <i class="fa-regular fa-envelope text-neutral-600"></i>
+                    <span class="text-sm">maryvanessa@example.com</span>
+                  </div>
                 </div>
-                <div
-                  class="border border-neutral-200 rounded-lg p-4 cursor-move"
-                >
-                  <div class="flex justify-between items-center mb-2">
-                    <span>Option B</span>
-                    <i class="fa-solid fa-grip-vertical text-neutral-400"></i>
+
+                <!-- Review Form -->
+                <div class="space-y-4">
+                  <div>
+                    <label class="block text-sm mb-2">Clarity Assessment</label>
+                    <div class="flex items-center space-x-4">
+                      <label class="flex items-center"
+                        ><input type="radio" name="clarity" class="mr-2" />
+                        1</label
+                      >
+                      <label class="flex items-center"
+                        ><input type="radio" name="clarity" class="mr-2" />
+                        2</label
+                      >
+                      <label class="flex items-center"
+                        ><input type="radio" name="clarity" class="mr-2" />
+                        3</label
+                      >
+                      <label class="flex items-center"
+                        ><input type="radio" name="clarity" class="mr-2" />
+                        4</label
+                      >
+                      <label class="flex items-center"
+                        ><input type="radio" name="clarity" class="mr-2" />
+                        5</label
+                      >
+                    </div>
                   </div>
-                  <textarea
-                    class="w-full p-3 border border-neutral-300 rounded-md"
-                    rows="3"
-                  >
-Enhance capacity building programs</textarea
-                  >
+
+                  <div>
+                    <label class="block text-sm mb-2">Comments</label>
+                    <textarea
+                      class="w-full p-3 border border-neutral-200 rounded-md"
+                      rows="4"
+                      placeholder="Add review comments..."
+                    ></textarea>
+                  </div>
                 </div>
               </div>
             </div>
@@ -722,21 +758,21 @@ Enhance capacity building programs</textarea
               type="button"
               class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
             >
-              Back to Synthesis
+              Back to Draft
             </button>
             <div class="space-x-4">
               <button
                 type="button"
                 class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
               >
-                Save Draft
+                Save Review
               </button>
-              <a href="internal-review.html">
+              <a href="final-draft.html">
                 <button
                   type="submit"
                   class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
                 >
-                  Continue to Review
+                  Submit Review
                 </button>
               </a>
             </div>

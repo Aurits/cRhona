@@ -588,18 +588,23 @@
               <div class="flex items-center">
                 <span
                   class="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-900 text-white"
-                  >10</span
+                  >12</span
                 >
                 <div class="ml-3">
-                  <h2 class="text-lg text-neutral-900">Draft Builder</h2>
-                  <p class="text-sm text-neutral-600">Step 10 of 12</p>
+                  <h2 class="text-lg text-neutral-900">Final Draft</h2>
+                  <p class="text-sm text-neutral-600">Step 12 of 12</p>
                 </div>
               </div>
               <div class="flex space-x-2">
                 <span
                   class="px-3 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
-                  >Draft v1.0</span
+                  >Draft Mode</span
                 >
+                <button
+                  class="px-3 py-1 bg-neutral-900 text-white rounded-full text-sm"
+                >
+                  Version 1.2
+                </button>
               </div>
             </div>
 
@@ -607,108 +612,135 @@
             <div class="mt-4 h-2 bg-neutral-200 rounded-full">
               <div
                 class="h-2 bg-neutral-900 rounded-full"
-                style="width: 66.67%"
+                style="width: 83%"
               ></div>
             </div>
           </div>
 
-          <!-- Template Builder -->
-          <div class="space-y-6">
-            <!-- Executive Summary -->
-            <div class="bg-white rounded-lg border border-neutral-200 p-6">
-              <label class="block text-sm text-neutral-700 mb-4"
-                >Executive Summary</label
-              >
-              <div class="prose max-w-none">
-                <textarea
-                  class="w-full p-4 border border-neutral-300 rounded-md min-h-[200px]"
-                  placeholder="Write your executive summary..."
-                ></textarea>
-              </div>
-            </div>
-
-            <!-- Problem Definition -->
-            <div class="bg-white rounded-lg border border-neutral-200 p-6">
-              <label class="block text-sm text-neutral-700 mb-4"
-                >Problem Definition</label
-              >
-              <div class="prose max-w-none">
-                <textarea
-                  class="w-full p-4 border border-neutral-300 rounded-md min-h-[150px]"
-                  placeholder="Define the problem..."
-                ></textarea>
-              </div>
-            </div>
-
-            <!-- Key Findings -->
-            <div class="bg-white rounded-lg border border-neutral-200 p-6">
-              <div class="flex justify-between items-center mb-4">
-                <label class="block text-sm text-neutral-700"
-                  >Key Findings</label
-                >
-                <button class="text-neutral-600 hover:text-neutral-900">
-                  <i class="fa-solid fa-plus"></i>
-                </button>
-              </div>
-              <div class="space-y-3">
-                <div class="flex items-start space-x-3">
-                  <div class="flex-shrink-0 mt-1">
-                    <i class="fa-solid fa-grip-vertical text-neutral-400"></i>
-                  </div>
-                  <textarea
-                    class="flex-1 p-3 border border-neutral-300 rounded-md"
-                    rows="2"
-                  >
-Finding 1: Implementation of evidence-based interventions showed positive outcomes across 75% of studies.</textarea
-                  >
-                </div>
-                <div class="flex items-start space-x-3">
-                  <div class="flex-shrink-0 mt-1">
-                    <i class="fa-solid fa-grip-vertical text-neutral-400"></i>
-                  </div>
-                  <textarea
-                    class="flex-1 p-3 border border-neutral-300 rounded-md"
-                    rows="2"
-                  >
-Finding 2: Cost-effectiveness analysis indicates potential savings of 30% in resource allocation.</textarea
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Policy Options -->
-            <div class="bg-white rounded-lg border border-neutral-200 p-6">
-              <label class="block text-sm text-neutral-700 mb-4"
-                >Policy Options</label
-              >
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="flex gap-6">
+            <!-- Main Content Editor -->
+            <div
+              class="flex-1 bg-white rounded-lg border border-neutral-200 p-6"
+            >
+              <div class="border-b border-neutral-200 pb-4 mb-6">
+                <h1 contenteditable="true" class="text-2xl mb-2">
+                  Impact of Climate Change on Agricultural Productivity
+                </h1>
                 <div
-                  class="border border-neutral-200 rounded-lg p-4 cursor-move"
+                  class="flex items-center space-x-4 text-sm text-neutral-600"
                 >
-                  <div class="flex justify-between items-center mb-2">
-                    <span>Option A</span>
-                    <i class="fa-solid fa-grip-vertical text-neutral-400"></i>
-                  </div>
-                  <textarea
-                    class="w-full p-3 border border-neutral-300 rounded-md"
-                    rows="3"
-                  >
-Implement comprehensive monitoring system</textarea
-                  >
+                  <span>Last edited by Peter Claver</span>
+                  <span>•</span>
+                  <span>April 20, 2025</span>
                 </div>
-                <div
-                  class="border border-neutral-200 rounded-lg p-4 cursor-move"
-                >
-                  <div class="flex justify-between items-center mb-2">
-                    <span>Option B</span>
-                    <i class="fa-solid fa-grip-vertical text-neutral-400"></i>
+              </div>
+
+              <!-- Editable Sections -->
+              <div class="space-y-6">
+                <section>
+                  <h3 contenteditable="true" class="text-lg mb-3">
+                    Executive Summary
+                  </h3>
+                  <div
+                    contenteditable="true"
+                    class="prose max-w-none text-neutral-700"
+                  >
+                    This research synthesis examines the current evidence on
+                    climate change impacts...
                   </div>
+                  <div
+                    class="inline-flex items-center text-sm text-neutral-500 mt-2"
+                  >
+                    <i class="fa-regular fa-comment mr-1"></i>
+                    <span>2 comments</span>
+                  </div>
+                </section>
+
+                <section>
+                  <h3 contenteditable="true" class="text-lg mb-3">
+                    Key Findings
+                  </h3>
+                  <div
+                    contenteditable="true"
+                    class="prose max-w-none text-neutral-700"
+                  >
+                    1. Temperature increases of 1.5°C significantly reduce crop
+                    yields 2. Adaptation strategies show promising results in
+                    pilot studies 3. Economic impacts vary by region and farming
+                    system
+                  </div>
+                </section>
+
+                <section>
+                  <h3 contenteditable="true" class="text-lg mb-3">
+                    Recommendations
+                  </h3>
+                  <div
+                    contenteditable="true"
+                    class="prose max-w-none text-neutral-700"
+                  >
+                    Based on the synthesis of available evidence, we
+                    recommend...
+                  </div>
+                </section>
+              </div>
+            </div>
+
+            <!-- Comments Sidebar -->
+            <div class="w-80 bg-white rounded-lg border border-neutral-200">
+              <div class="p-4 border-b border-neutral-200">
+                <h3 class="text-lg">Review Comments</h3>
+              </div>
+
+              <div class="p-4 space-y-4">
+                <!-- Comment Thread -->
+                <div class="space-y-3">
+                  <div class="flex items-start space-x-3">
+                    <img
+                      src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=789"
+                      class="w-8 h-8 rounded-full"
+                    />
+                    <div>
+                      <div class="flex items-center space-x-2">
+                        <span>Mary Vanessa</span>
+                        <span class="text-sm text-neutral-500">2h ago</span>
+                      </div>
+                      <p class="text-sm mt-1">
+                        Consider adding more specific examples from the
+                        literature review.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start space-x-3 pl-11">
+                    <img
+                      src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=123"
+                      class="w-8 h-8 rounded-full"
+                    />
+                    <div>
+                      <div class="flex items-center space-x-2">
+                        <span>Peter Claver</span>
+                        <span class="text-sm text-neutral-500">1h ago</span>
+                      </div>
+                      <p class="text-sm mt-1">
+                        Added three case studies from recent meta-analyses.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Add Comment -->
+                <div class="pt-3 border-t border-neutral-200">
                   <textarea
-                    class="w-full p-3 border border-neutral-300 rounded-md"
-                    rows="3"
+                    class="w-full p-2 border border-neutral-200 rounded-md text-sm"
+                    rows="2"
+                    placeholder="Add a comment..."
+                  ></textarea>
+                  <button
+                    class="mt-2 px-3 py-1 bg-neutral-900 text-white text-sm rounded-md"
                   >
-Enhance capacity building programs</textarea
-                  >
+                    Comment
+                  </button>
                 </div>
               </div>
             </div>
@@ -722,7 +754,7 @@ Enhance capacity building programs</textarea
               type="button"
               class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
             >
-              Back to Synthesis
+              Back to Review
             </button>
             <div class="space-x-4">
               <button
@@ -731,14 +763,12 @@ Enhance capacity building programs</textarea
               >
                 Save Draft
               </button>
-              <a href="internal-review.html">
-                <button
-                  type="submit"
-                  class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
-                >
-                  Continue to Review
-                </button>
-              </a>
+              <button
+                type="submit"
+                class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+              >
+                Finalize Draft
+              </button>
             </div>
           </div>
         </div>
