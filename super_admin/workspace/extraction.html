@@ -588,17 +588,17 @@
               <div class="flex items-center">
                 <span
                   class="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-900 text-white"
-                  >2</span
+                  >8</span
                 >
                 <div class="ml-3">
-                  <h2 class="text-lg text-neutral-900">Question Review</h2>
-                  <p class="text-sm text-neutral-600">Step 2 of 12</p>
+                  <h2 class="text-lg text-neutral-900">Extraction</h2>
+                  <p class="text-sm text-neutral-600">Step 8 of 12</p>
                 </div>
               </div>
               <div class="flex space-x-2">
                 <span
                   class="px-3 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
-                  >Review</span
+                  >In Progress</span
                 >
               </div>
             </div>
@@ -607,85 +607,90 @@
             <div class="mt-4 h-2 bg-neutral-200 rounded-full">
               <div
                 class="h-2 bg-neutral-900 rounded-full"
-                style="width: 16%"
+                style="width: 50%"
               ></div>
             </div>
           </div>
 
-          <!-- Question Review Section -->
           <div class="bg-white rounded-lg border border-neutral-200 p-6">
-            <div class="mb-8">
-              <h3 class="text-xl mb-4">Question Details</h3>
-
-              <div class="space-y-4 bg-neutral-50 p-4 rounded-lg">
-                <div>
-                  <span class="text-sm text-neutral-600">Submitted by:</span>
-                  <p>Peter Claver • Health Policy Researcher</p>
-                </div>
-
-                <div>
-                  <span class="text-sm text-neutral-600">Question:</span>
-                  <p>
-                    What are the most effective interventions for reducing
-                    maternal mortality in rural areas of developing countries?
-                  </p>
-                </div>
-
-                <div class="flex gap-4">
-                  <div>
-                    <span class="text-sm text-neutral-600">Submitted:</span>
-                    <p>April 20, 2025</p>
-                  </div>
-                  <div>
-                    <span class="text-sm text-neutral-600">Deadline:</span>
-                    <p>May 5, 2025</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Review Form -->
             <form
-              class="space-y-6"
-              onsubmit="event.preventDefault(); window.location.href='create-project.html';"
+              class="space-y-8"
+              onsubmit="event.preventDefault(); window.location.href='synthesis.html';"
             >
-              <div>
-                <label class="block text-sm text-neutral-700 mb-2"
-                  >Is this question within scope?</label
+              <!-- Extraction Document Upload -->
+              <div class="space-y-4">
+                <label class="block text-sm text-neutral-700"
+                  >Upload Extraction Document (Word format)</label
                 >
-                <div class="space-x-4">
-                  <label class="inline-flex items-center">
-                    <input type="radio" name="in_scope" class="mr-2" />
-                    <span>Yes</span>
-                  </label>
-                  <label class="inline-flex items-center">
-                    <input type="radio" name="in_scope" class="mr-2" />
-                    <span>No</span>
-                  </label>
+                <div
+                  class="border-2 border-dashed border-neutral-300 rounded-lg p-6"
+                >
+                  <div class="text-center space-y-3">
+                    <i
+                      class="fa-solid fa-file-word text-2xl text-neutral-400"
+                    ></i>
+                    <p class="text-neutral-600">
+                      Drag and drop your Word document here, or click to browse
+                    </p>
+                    <button
+                      type="button"
+                      class="px-4 py-2 text-sm border border-neutral-300 rounded-md hover:bg-neutral-50"
+                    >
+                      Choose Document
+                    </button>
+                  </div>
                 </div>
               </div>
 
-              <div>
-                <label class="block text-sm text-neutral-700 mb-2"
-                  >Review Notes</label
+              <!-- Source Files Count -->
+              <div class="space-y-4">
+                <label class="block text-sm text-neutral-700"
+                  >Number of Source Files</label
                 >
-                <textarea
-                  rows="4"
-                  class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-neutral-300 focus:outline-none"
-                  placeholder="Enter your review notes..."
-                ></textarea>
+                <input
+                  type="number"
+                  class="w-full px-4 py-2 border border-neutral-300 rounded-md"
+                  placeholder="Enter number of files"
+                />
               </div>
 
-              <div>
-                <label class="block text-sm text-neutral-700 mb-2"
-                  >Recommendation</label
+              <!-- PRISMA File Upload -->
+              <div class="space-y-4">
+                <label class="block text-sm text-neutral-700"
+                  >Upload PRISMA File (PDF or Image)</label
+                >
+                <div
+                  class="border-2 border-dashed border-neutral-300 rounded-lg p-6"
+                >
+                  <div class="text-center space-y-3">
+                    <i
+                      class="fa-solid fa-file-pdf text-2xl text-neutral-400"
+                    ></i>
+                    <p class="text-neutral-600">
+                      Drag and drop your PRISMA file here, or click to browse
+                    </p>
+                    <button
+                      type="button"
+                      class="px-4 py-2 text-sm border border-neutral-300 rounded-md hover:bg-neutral-50"
+                    >
+                      Choose PRISMA File
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Method Selection -->
+              <div class="space-y-4">
+                <label class="block text-sm text-neutral-700"
+                  >Extraction Method Used</label
                 >
                 <select
-                  class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-neutral-300 focus:outline-none"
+                  class="w-full px-4 py-2 border border-neutral-300 rounded-md"
                 >
-                  <option>Proceed to Project Creation</option>
-                  <option>Terminate Workflow - Out of Scope</option>
-                  <option>Request More Information</option>
+                  <option value="">Select method</option>
+                  <option value="manual">Manual</option>
+                  <option value="elicit">Elicit</option>
+                  <option value="mixed">Mixed</option>
                 </select>
               </div>
 
@@ -697,7 +702,7 @@
                   type="button"
                   class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
                 >
-                  Back
+                  Back to Screening
                 </button>
                 <div class="space-x-4">
                   <button
@@ -706,14 +711,12 @@
                   >
                     Save Draft
                   </button>
-                  <a href="create-project.html">
-                    <button
-                      type="submit"
-                      class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
-                    >
-                      Submit Review
-                    </button>
-                  </a>
+                  <button
+                    type="submit"
+                    class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                  >
+                    Continue to Synthesis
+                  </button>
                 </div>
               </div>
             </form>

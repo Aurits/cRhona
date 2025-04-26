@@ -588,17 +588,19 @@
               <div class="flex items-center">
                 <span
                   class="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-900 text-white"
-                  >2</span
+                  >4</span
                 >
                 <div class="ml-3">
-                  <h2 class="text-lg text-neutral-900">Question Review</h2>
-                  <p class="text-sm text-neutral-600">Step 2 of 12</p>
+                  <h2 class="text-lg text-neutral-900">
+                    Question Clarification
+                  </h2>
+                  <p class="text-sm text-neutral-600">Step 4 of 12</p>
                 </div>
               </div>
               <div class="flex space-x-2">
                 <span
                   class="px-3 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
-                  >Review</span
+                  >Draft</span
                 >
               </div>
             </div>
@@ -607,86 +609,126 @@
             <div class="mt-4 h-2 bg-neutral-200 rounded-full">
               <div
                 class="h-2 bg-neutral-900 rounded-full"
-                style="width: 16%"
+                style="width: 25%"
               ></div>
             </div>
           </div>
 
-          <!-- Question Review Section -->
           <div class="bg-white rounded-lg border border-neutral-200 p-6">
-            <div class="mb-8">
-              <h3 class="text-xl mb-4">Question Details</h3>
-
-              <div class="space-y-4 bg-neutral-50 p-4 rounded-lg">
-                <div>
-                  <span class="text-sm text-neutral-600">Submitted by:</span>
-                  <p>Peter Claver • Health Policy Researcher</p>
-                </div>
-
-                <div>
-                  <span class="text-sm text-neutral-600">Question:</span>
-                  <p>
-                    What are the most effective interventions for reducing
-                    maternal mortality in rural areas of developing countries?
-                  </p>
-                </div>
-
-                <div class="flex gap-4">
-                  <div>
-                    <span class="text-sm text-neutral-600">Submitted:</span>
-                    <p>April 20, 2025</p>
-                  </div>
-                  <div>
-                    <span class="text-sm text-neutral-600">Deadline:</span>
-                    <p>May 5, 2025</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Review Form -->
+            <!-- Form 4.3 -->
             <form
               class="space-y-6"
-              onsubmit="event.preventDefault(); window.location.href='create-project.html';"
+              onsubmit="event.preventDefault(); window.location.href='qn-approval.html';"
             >
               <div>
                 <label class="block text-sm text-neutral-700 mb-2"
-                  >Is this question within scope?</label
-                >
-                <div class="space-x-4">
-                  <label class="inline-flex items-center">
-                    <input type="radio" name="in_scope" class="mr-2" />
-                    <span>Yes</span>
-                  </label>
-                  <label class="inline-flex items-center">
-                    <input type="radio" name="in_scope" class="mr-2" />
-                    <span>No</span>
-                  </label>
-                </div>
-              </div>
-
-              <div>
-                <label class="block text-sm text-neutral-700 mb-2"
-                  >Review Notes</label
+                  >Clarified Research Question</label
                 >
                 <textarea
-                  rows="4"
-                  class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-neutral-300 focus:outline-none"
-                  placeholder="Enter your review notes..."
+                  rows="3"
+                  class="w-full px-4 py-2 border border-neutral-300 rounded-md"
+                  placeholder="Enter the refined research question..."
                 ></textarea>
               </div>
 
               <div>
                 <label class="block text-sm text-neutral-700 mb-2"
-                  >Recommendation</label
+                  >Context Description</label
+                >
+                <textarea
+                  rows="4"
+                  class="w-full px-4 py-2 border border-neutral-300 rounded-md"
+                  placeholder="Describe the context..."
+                ></textarea>
+              </div>
+
+              <div>
+                <label class="block text-sm text-neutral-700 mb-2"
+                  >Policy Need/Purpose</label
                 >
                 <select
-                  class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-neutral-300 focus:outline-none"
+                  class="w-full px-4 py-2 mb-2 border border-neutral-300 rounded-md"
                 >
-                  <option>Proceed to Project Creation</option>
-                  <option>Terminate Workflow - Out of Scope</option>
-                  <option>Request More Information</option>
+                  <option>Policy Development</option>
+                  <option>Implementation Strategy</option>
+                  <option>Program Evaluation</option>
+                  <option>Resource Allocation</option>
                 </select>
+                <textarea
+                  rows="3"
+                  class="w-full px-4 py-2 border border-neutral-300 rounded-md"
+                  placeholder="Additional details about policy need..."
+                ></textarea>
+              </div>
+
+              <div>
+                <label class="block text-sm text-neutral-700 mb-2"
+                  >Background & Scope</label
+                >
+                <textarea
+                  rows="4"
+                  class="w-full px-4 py-2 border border-neutral-300 rounded-md"
+                  placeholder="Define the background and scope..."
+                ></textarea>
+              </div>
+
+              <div>
+                <label class="block text-sm text-neutral-700 mb-2"
+                  >Sub-questions or Dimensions</label
+                >
+                <div class="space-y-2">
+                  <input
+                    type="text"
+                    class="w-full px-4 py-2 border border-neutral-300 rounded-md"
+                    placeholder="Enter sub-question"
+                  />
+                  <button
+                    type="button"
+                    class="text-neutral-600 text-sm hover:text-neutral-900"
+                  >
+                    <i class="fa-solid fa-plus"></i> Add Another Sub-question
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm text-neutral-700 mb-2"
+                  >Stakeholders Involved</label
+                >
+                <select
+                  multiple
+                  class="w-full px-4 py-2 border border-neutral-300 rounded-md"
+                >
+                  <option>Policy Makers</option>
+                  <option>Healthcare Providers</option>
+                  <option>Community Leaders</option>
+                  <option>NGOs</option>
+                  <option>Research Institutions</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm text-neutral-700 mb-2"
+                  >Expected Output Type</label
+                >
+                <div class="space-x-4">
+                  <label class="inline-flex items-center">
+                    <input type="radio" name="output_type" class="mr-2" />
+                    <span>Summary</span>
+                  </label>
+                  <label class="inline-flex items-center">
+                    <input type="radio" name="output_type" class="mr-2" />
+                    <span>Brief</span>
+                  </label>
+                  <label class="inline-flex items-center">
+                    <input type="radio" name="output_type" class="mr-2" />
+                    <span>Infographic</span>
+                  </label>
+                  <label class="inline-flex items-center">
+                    <input type="radio" name="output_type" class="mr-2" />
+                    <span>Other</span>
+                  </label>
+                </div>
               </div>
 
               <!-- Action Buttons -->
@@ -706,14 +748,12 @@
                   >
                     Save Draft
                   </button>
-                  <a href="create-project.html">
-                    <button
-                      type="submit"
-                      class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
-                    >
-                      Submit Review
-                    </button>
-                  </a>
+                  <button
+                    type="submit"
+                    class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                  >
+                    Submit for Review
+                  </button>
                 </div>
               </div>
             </form>
