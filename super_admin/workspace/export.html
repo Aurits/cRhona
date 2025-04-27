@@ -579,357 +579,628 @@
 
   <body class="h-full text-base-content">
     <div id="app" class="min-h-screen bg-neutral-50 flex">
-      <!-- Project Workspace Content -->
-      <div id="workspace-content" class="pt-[72px] px-6 py-8 w-full">
+      <!-- Project Steps Sidebar -->
+      <div
+        class="fixed left-0 top-[0px] h-full w-[240px] bg-white border-r border-neutral-200 overflow-y-auto"
+      >
+        <!-- Main App Sidebar -->
+        <div class="p-4 border-b border-neutral-200">
+          <div class="flex items-center justify-between">
+            <span class="text-sm">Main Navigation</span>
+            <button class="text-neutral-500 hover:text-neutral-700">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+          </div>
+          <div class="mt-2 space-y-1 opacity-50">
+            <a href="../dashboard.html">
+              <div class="flex items-center space-x-3 p-2 rounded-md">
+                <i class="fa-solid fa-home"></i>
+                <span>Dashboard</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project Steps -->
+        <div class="p-4">
+          <div class="text-sm mb-4">Project Steps</div>
+          <div class="space-y-1">
+            <!-- All 14 Steps with Links -->
+            <a
+              href="qn-capture.html"
+              class="flex items-center space-x-3 p-2 rounded-md bg-neutral-100 hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-1"></i>
+              <span>Question Capture</span>
+            </a>
+
+            <a
+              href="qn-review.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-2"></i>
+              <span>Question Review</span>
+            </a>
+
+            <a
+              href="create-project.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-3"></i>
+              <span>Create Project</span>
+            </a>
+
+            <a
+              href="qn-clarification.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-4"></i>
+              <span>Question Clarification</span>
+            </a>
+
+            <a
+              href="qn-approval.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-5"></i>
+              <span>Question Approval</span>
+            </a>
+
+            <a
+              href="search.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-6"></i>
+              <span>Search</span>
+            </a>
+
+            <a
+              href="screening.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-7"></i>
+              <span>Screening</span>
+            </a>
+
+            <a
+              href="extraction.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-8"></i>
+              <span>Extraction</span>
+            </a>
+
+            <a
+              href="synthesis.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-9"></i>
+              <span>Synthesis</span>
+            </a>
+
+            <a
+              href="draft.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-10"></i>
+              <span>Draft</span>
+            </a>
+
+            <a
+              href="internal-review.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-11"></i>
+              <span>Internal Review</span>
+            </a>
+
+            <a
+              href="final-draft.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-12"></i>
+              <span>Final Draft</span>
+            </a>
+
+            <a
+              href="export.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-13"></i>
+              <span>Export</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div id="workspace-content" class="ml-[240px] pt-[0px] px-6 py-8 w-full">
         <div class="max-w-7xl mx-auto">
-          <!-- Progress Tracker -->
-          <div class="mb-8">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center">
-                <span
-                  class="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-900 text-white"
-                  >12</span
-                >
-                <div class="ml-3">
-                  <h2 class="text-lg text-neutral-900">Export & Share</h2>
-                  <p class="text-sm text-neutral-600">Step 12 of 12</p>
+          <!-- Progress Bar Section -->
+          <div class="mb-8 bg-white rounded-lg border border-neutral-200 p-6">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center space-x-4">
+                <div class="flex items-center">
+                  <span
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-900 text-white text-lg"
+                    >13</span
+                  >
+                  <div class="ml-4">
+                    <h2 class="text-xl">Export</h2>
+                  </div>
                 </div>
               </div>
-              <div class="flex space-x-2">
+              <div class="flex items-center space-x-3">
                 <span
                   class="px-3 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
-                  >Ready to Export</span
+                  >Draft</span
                 >
+                <button class="p-2 hover:bg-neutral-100 rounded-full">
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
               </div>
             </div>
 
-            <!-- Progress Bar -->
-            <div class="mt-4 h-2 bg-neutral-200 rounded-full">
+            <!-- New Progress Steps -->
+            <div class="relative mb-8">
+              <div class="absolute top-4 w-full h-0.5 bg-neutral-200"></div>
+              <div class="relative flex justify-between">
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-900 text-white flex items-center justify-center mb-2 z-10"
+                  >
+                    <i class="fa-solid fa-check text-sm"></i>
+                  </div>
+                  <span class="text-xs text-neutral-600">Question Capture</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    2
+                  </div>
+                  <span class="text-xs text-neutral-600">Question Review</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    3
+                  </div>
+                  <span class="text-xs text-neutral-600">Create Project</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    4
+                  </div>
+                  <span class="text-xs text-neutral-600"
+                    >Question Clarification</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    5
+                  </div>
+                  <span class="text-xs text-neutral-600"
+                    >Question Approval</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    6
+                  </div>
+                  <span class="text-xs text-neutral-600">Search</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    7
+                  </div>
+                  <span class="text-xs text-neutral-600">Screening</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    8
+                  </div>
+                  <span class="text-xs text-neutral-600">Extraction</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    9
+                  </div>
+                  <span class="text-xs text-neutral-600">Synthesis</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    10
+                  </div>
+                  <span class="text-xs text-neutral-600">Draft</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    11
+                  </div>
+                  <span class="text-xs text-neutral-600">Internal Review</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    12
+                  </div>
+                  <span class="text-xs text-neutral-600">Final Draft</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    13
+                  </div>
+                  <span class="text-xs text-neutral-600">Export</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    14
+                  </div>
+                  <span class="text-xs text-neutral-600">Follow Up</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <!-- Export Options -->
               <div
-                class="h-2 bg-neutral-900 rounded-full"
-                style="width: 100%"
-              ></div>
-            </div>
-          </div>
+                class="flex-1 bg-white rounded-lg border border-neutral-200 p-6"
+              >
+                <h3 class="text-xl mb-6">Export Options</h3>
 
-          <div class="flex gap-6">
-            <!-- Export Options -->
+                <!-- Enhanced Format Selection -->
+                <div class="grid grid-cols-4 gap-4 mb-8">
+                  <button
+                    class="p-4 border border-neutral-200 rounded-lg hover:border-neutral-900 text-center"
+                  >
+                    <i class="fa-regular fa-file-pdf text-2xl mb-2"></i>
+                    <div class="text-sm">PDF Format</div>
+                  </button>
+                  <button
+                    class="p-4 border border-neutral-200 rounded-lg hover:border-neutral-900 text-center"
+                  >
+                    <i class="fa-regular fa-file-word text-2xl mb-2"></i>
+                    <div class="text-sm">Word Document</div>
+                  </button>
+                  <button
+                    class="p-4 border border-neutral-200 rounded-lg hover:border-neutral-900 text-center"
+                  >
+                    <i class="fa-solid fa-volume-high text-2xl mb-2"></i>
+                    <div class="text-sm">Audio Version</div>
+                  </button>
+                  <button
+                    class="p-4 border border-neutral-200 rounded-lg hover:border-neutral-900 text-center"
+                  >
+                    <i
+                      class="fa-solid fa-presentation-screen text-2xl mb-2"
+                    ></i>
+                    <div class="text-sm">Presentation</div>
+                  </button>
+                </div>
+
+                <!-- Enhanced Output Options -->
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                  <div class="border border-neutral-200 rounded-lg p-4">
+                    <h4 class="text-lg mb-4">Multimedia Options</h4>
+                    <div class="space-y-3">
+                      <label class="flex items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          class="rounded border-neutral-300"
+                        />
+                        <span>Include infographics</span>
+                      </label>
+                      <label class="flex items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          class="rounded border-neutral-300"
+                        />
+                        <span>Generate executive summary</span>
+                      </label>
+                      <label class="flex items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          class="rounded border-neutral-300"
+                        />
+                        <span>Add interactive charts</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="border border-neutral-200 rounded-lg p-4">
+                    <h4 class="text-lg mb-4">AI Enhancement</h4>
+                    <div class="space-y-3">
+                      <label class="flex items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          class="rounded border-neutral-300"
+                        />
+                        <span>Auto-generate citations</span>
+                      </label>
+                      <label class="flex items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          class="rounded border-neutral-300"
+                        />
+                        <span>Simplify language</span>
+                      </label>
+                      <label class="flex items-center space-x-2">
+                        <input
+                          type="checkbox"
+                          class="rounded border-neutral-300"
+                        />
+                        <span>Create key takeaways</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Enhanced Preview Section -->
+                <div class="border border-neutral-200 rounded-lg p-4 mb-6">
+                  <div class="flex items-center justify-between mb-4">
+                    <h4 class="text-lg">Enhanced Preview</h4>
+                    <div class="flex space-x-3">
+                      <button
+                        class="text-sm text-neutral-600 hover:text-neutral-900"
+                      >
+                        <i class="fa-solid fa-rotate-right mr-1"></i> Regenerate
+                      </button>
+                      <button
+                        class="text-sm text-neutral-600 hover:text-neutral-900"
+                      >
+                        <i class="fa-solid fa-expand mr-1"></i> Full Screen
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-2 gap-4">
+                    <!-- Document Preview -->
+                    <div
+                      class="bg-neutral-50 rounded p-4 border border-neutral-200"
+                    >
+                      <div class="mb-3 text-sm">Document Preview</div>
+                      <div class="bg-white p-4 rounded shadow-sm">
+                        <h5 class="text-lg mb-2">
+                          Climate Change Impact Analysis
+                        </h5>
+                        <p class="text-sm text-neutral-600 mb-4">
+                          Executive Summary
+                        </p>
+                        <div class="space-y-2 text-sm text-neutral-500">
+                          <p>
+                            This analysis examines the effects of climate change
+                            on...
+                          </p>
+                          <p>
+                            Key findings indicate significant impacts in the
+                            following areas...
+                          </p>
+                        </div>
+                      </div>
+                      <div class="mt-3 flex justify-end">
+                        <button
+                          class="text-sm text-neutral-600 hover:text-neutral-900"
+                        >
+                          <i class="fa-solid fa-download mr-1"></i> Download PDF
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- Media Gallery -->
+                    <div
+                      class="bg-neutral-50 rounded p-4 border border-neutral-200"
+                    >
+                      <div class="mb-3 text-sm">Media Assets</div>
+                      <div class="grid grid-cols-2 gap-2">
+                        <div class="bg-neutral-200 rounded p-2 text-center">
+                          <i
+                            class="fa-regular fa-image text-2xl text-neutral-600"
+                          ></i>
+                          <div class="text-xs mt-1">Figure 1.jpg</div>
+                        </div>
+                        <div class="bg-neutral-200 rounded p-2 text-center">
+                          <i
+                            class="fa-solid fa-video text-2xl text-neutral-600"
+                          ></i>
+                          <div class="text-xs mt-1">Summary.mp4</div>
+                        </div>
+                        <div class="bg-neutral-200 rounded p-2 text-center">
+                          <i
+                            class="fa-solid fa-chart-line text-2xl text-neutral-600"
+                          ></i>
+                          <div class="text-xs mt-1">Trends.png</div>
+                        </div>
+                        <div class="bg-neutral-200 rounded p-2 text-center">
+                          <i
+                            class="fa-regular fa-image text-2xl text-neutral-600"
+                          ></i>
+                          <div class="text-xs mt-1">Data.jpg</div>
+                        </div>
+                      </div>
+                      <div class="mt-3 flex justify-between">
+                        <button
+                          class="text-sm text-neutral-600 hover:text-neutral-900"
+                        >
+                          <i class="fa-solid fa-plus mr-1"></i> Add Media
+                        </button>
+                        <button
+                          class="text-sm text-neutral-600 hover:text-neutral-900"
+                        >
+                          <i class="fa-solid fa-download mr-1"></i> Download All
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Generation Controls -->
+                  <div class="mt-4 border-t border-neutral-200 pt-4">
+                    <div class="flex justify-between items-center">
+                      <div class="text-sm">AI Generation Controls</div>
+                      <button
+                        class="px-3 py-1 text-sm bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                      >
+                        Generate New Version
+                      </button>
+                    </div>
+                    <div class="grid grid-cols-3 gap-3 mt-3">
+                      <button
+                        class="p-2 text-sm border border-neutral-200 rounded hover:bg-neutral-50"
+                      >
+                        <i class="fa-solid fa-wand-magic-sparkles mr-1"></i>
+                        Regenerate Text
+                      </button>
+                      <button
+                        class="p-2 text-sm border border-neutral-200 rounded hover:bg-neutral-50"
+                      >
+                        <i class="fa-solid fa-image mr-1"></i> Generate Images
+                      </button>
+                      <button
+                        class="p-2 text-sm border border-neutral-200 rounded hover:bg-neutral-50"
+                      >
+                        <i class="fa-solid fa-chart-simple mr-1"></i> Create
+                        Charts
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Share Panel -->
+              <div
+                class="w-96 bg-white rounded-lg border border-neutral-200 p-6"
+              >
+                <h3 class="text-xl mb-6">Advanced Sharing Options</h3>
+
+                <form class="space-y-4">
+                  <div>
+                    <label class="block text-sm mb-1">To:</label>
+                    <input
+                      type="email"
+                      class="w-full p-2 border border-neutral-200 rounded-md"
+                      placeholder="Enter email address"
+                    />
+                  </div>
+
+                  <div>
+                    <label class="block text-sm mb-1">CC:</label>
+                    <input
+                      type="email"
+                      class="w-full p-2 border border-neutral-200 rounded-md"
+                      placeholder="Additional recipients"
+                    />
+                  </div>
+
+                  <div>
+                    <label class="block text-sm mb-1">Subject:</label>
+                    <input
+                      type="text"
+                      class="w-full p-2 border border-neutral-200 rounded-md"
+                      value="Climate Change Impact Analysis - Final Report"
+                    />
+                  </div>
+
+                  <div>
+                    <label class="block text-sm mb-1">Message:</label>
+                    <textarea
+                      class="w-full p-2 border border-neutral-200 rounded-md"
+                      rows="4"
+                      placeholder="Add a message..."
+                    ></textarea>
+                  </div>
+
+                  <div>
+                    <label class="block text-sm mb-1">Access Settings</label>
+                    <select
+                      class="w-full p-2 border border-neutral-200 rounded-md"
+                    >
+                      <option>View only</option>
+                      <option>Download enabled</option>
+                      <option>Full access</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block text-sm mb-1">Expiry Date</label>
+                    <input
+                      type="date"
+                      class="w-full p-2 border border-neutral-200 rounded-md"
+                    />
+                  </div>
+
+                  <div class="pt-4 space-y-2">
+                    <button
+                      type="submit"
+                      class="w-full py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                    >
+                      Send Document
+                    </button>
+                    <button
+                      type="button"
+                      class="w-full py-2 border border-neutral-200 rounded-md hover:bg-neutral-50"
+                    >
+                      Generate Shareable Link
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
             <div
-              class="flex-1 bg-white rounded-lg border border-neutral-200 p-6"
+              class="flex justify-between mt-8 pt-6 border-t border-neutral-200"
             >
-              <h3 class="text-xl mb-6">Export Options</h3>
-
-              <!-- Enhanced Format Selection -->
-              <div class="grid grid-cols-4 gap-4 mb-8">
-                <button
-                  class="p-4 border border-neutral-200 rounded-lg hover:border-neutral-900 text-center"
-                >
-                  <i class="fa-regular fa-file-pdf text-2xl mb-2"></i>
-                  <div class="text-sm">PDF Format</div>
-                </button>
-                <button
-                  class="p-4 border border-neutral-200 rounded-lg hover:border-neutral-900 text-center"
-                >
-                  <i class="fa-regular fa-file-word text-2xl mb-2"></i>
-                  <div class="text-sm">Word Document</div>
-                </button>
-                <button
-                  class="p-4 border border-neutral-200 rounded-lg hover:border-neutral-900 text-center"
-                >
-                  <i class="fa-solid fa-volume-high text-2xl mb-2"></i>
-                  <div class="text-sm">Audio Version</div>
-                </button>
-                <button
-                  class="p-4 border border-neutral-200 rounded-lg hover:border-neutral-900 text-center"
-                >
-                  <i class="fa-solid fa-presentation-screen text-2xl mb-2"></i>
-                  <div class="text-sm">Presentation</div>
-                </button>
-              </div>
-
-              <!-- Enhanced Output Options -->
-              <div class="grid grid-cols-2 gap-4 mb-8">
-                <div class="border border-neutral-200 rounded-lg p-4">
-                  <h4 class="text-lg mb-4">Multimedia Options</h4>
-                  <div class="space-y-3">
-                    <label class="flex items-center space-x-2">
-                      <input
-                        type="checkbox"
-                        class="rounded border-neutral-300"
-                      />
-                      <span>Include infographics</span>
-                    </label>
-                    <label class="flex items-center space-x-2">
-                      <input
-                        type="checkbox"
-                        class="rounded border-neutral-300"
-                      />
-                      <span>Generate executive summary</span>
-                    </label>
-                    <label class="flex items-center space-x-2">
-                      <input
-                        type="checkbox"
-                        class="rounded border-neutral-300"
-                      />
-                      <span>Add interactive charts</span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="border border-neutral-200 rounded-lg p-4">
-                  <h4 class="text-lg mb-4">AI Enhancement</h4>
-                  <div class="space-y-3">
-                    <label class="flex items-center space-x-2">
-                      <input
-                        type="checkbox"
-                        class="rounded border-neutral-300"
-                      />
-                      <span>Auto-generate citations</span>
-                    </label>
-                    <label class="flex items-center space-x-2">
-                      <input
-                        type="checkbox"
-                        class="rounded border-neutral-300"
-                      />
-                      <span>Simplify language</span>
-                    </label>
-                    <label class="flex items-center space-x-2">
-                      <input
-                        type="checkbox"
-                        class="rounded border-neutral-300"
-                      />
-                      <span>Create key takeaways</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Enhanced Preview Section -->
-              <div class="border border-neutral-200 rounded-lg p-4 mb-6">
-                <div class="flex items-center justify-between mb-4">
-                  <h4 class="text-lg">Enhanced Preview</h4>
-                  <div class="flex space-x-3">
-                    <button
-                      class="text-sm text-neutral-600 hover:text-neutral-900"
-                    >
-                      <i class="fa-solid fa-rotate-right mr-1"></i> Regenerate
-                    </button>
-                    <button
-                      class="text-sm text-neutral-600 hover:text-neutral-900"
-                    >
-                      <i class="fa-solid fa-expand mr-1"></i> Full Screen
-                    </button>
-                  </div>
-                </div>
-
-                <div class="grid grid-cols-2 gap-4">
-                  <!-- Document Preview -->
-                  <div
-                    class="bg-neutral-50 rounded p-4 border border-neutral-200"
-                  >
-                    <div class="mb-3 text-sm">Document Preview</div>
-                    <div class="bg-white p-4 rounded shadow-sm">
-                      <h5 class="text-lg mb-2">
-                        Climate Change Impact Analysis
-                      </h5>
-                      <p class="text-sm text-neutral-600 mb-4">
-                        Executive Summary
-                      </p>
-                      <div class="space-y-2 text-sm text-neutral-500">
-                        <p>
-                          This analysis examines the effects of climate change
-                          on...
-                        </p>
-                        <p>
-                          Key findings indicate significant impacts in the
-                          following areas...
-                        </p>
-                      </div>
-                    </div>
-                    <div class="mt-3 flex justify-end">
-                      <button
-                        class="text-sm text-neutral-600 hover:text-neutral-900"
-                      >
-                        <i class="fa-solid fa-download mr-1"></i> Download PDF
-                      </button>
-                    </div>
-                  </div>
-
-                  <!-- Media Gallery -->
-                  <div
-                    class="bg-neutral-50 rounded p-4 border border-neutral-200"
-                  >
-                    <div class="mb-3 text-sm">Media Assets</div>
-                    <div class="grid grid-cols-2 gap-2">
-                      <div class="bg-neutral-200 rounded p-2 text-center">
-                        <i
-                          class="fa-regular fa-image text-2xl text-neutral-600"
-                        ></i>
-                        <div class="text-xs mt-1">Figure 1.jpg</div>
-                      </div>
-                      <div class="bg-neutral-200 rounded p-2 text-center">
-                        <i
-                          class="fa-solid fa-video text-2xl text-neutral-600"
-                        ></i>
-                        <div class="text-xs mt-1">Summary.mp4</div>
-                      </div>
-                      <div class="bg-neutral-200 rounded p-2 text-center">
-                        <i
-                          class="fa-solid fa-chart-line text-2xl text-neutral-600"
-                        ></i>
-                        <div class="text-xs mt-1">Trends.png</div>
-                      </div>
-                      <div class="bg-neutral-200 rounded p-2 text-center">
-                        <i
-                          class="fa-regular fa-image text-2xl text-neutral-600"
-                        ></i>
-                        <div class="text-xs mt-1">Data.jpg</div>
-                      </div>
-                    </div>
-                    <div class="mt-3 flex justify-between">
-                      <button
-                        class="text-sm text-neutral-600 hover:text-neutral-900"
-                      >
-                        <i class="fa-solid fa-plus mr-1"></i> Add Media
-                      </button>
-                      <button
-                        class="text-sm text-neutral-600 hover:text-neutral-900"
-                      >
-                        <i class="fa-solid fa-download mr-1"></i> Download All
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Generation Controls -->
-                <div class="mt-4 border-t border-neutral-200 pt-4">
-                  <div class="flex justify-between items-center">
-                    <div class="text-sm">AI Generation Controls</div>
-                    <button
-                      class="px-3 py-1 text-sm bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
-                    >
-                      Generate New Version
-                    </button>
-                  </div>
-                  <div class="grid grid-cols-3 gap-3 mt-3">
-                    <button
-                      class="p-2 text-sm border border-neutral-200 rounded hover:bg-neutral-50"
-                    >
-                      <i class="fa-solid fa-wand-magic-sparkles mr-1"></i>
-                      Regenerate Text
-                    </button>
-                    <button
-                      class="p-2 text-sm border border-neutral-200 rounded hover:bg-neutral-50"
-                    >
-                      <i class="fa-solid fa-image mr-1"></i> Generate Images
-                    </button>
-                    <button
-                      class="p-2 text-sm border border-neutral-200 rounded hover:bg-neutral-50"
-                    >
-                      <i class="fa-solid fa-chart-simple mr-1"></i> Create
-                      Charts
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Share Panel -->
-            <div class="w-96 bg-white rounded-lg border border-neutral-200 p-6">
-              <h3 class="text-xl mb-6">Advanced Sharing Options</h3>
-
-              <form class="space-y-4">
-                <div>
-                  <label class="block text-sm mb-1">To:</label>
-                  <input
-                    type="email"
-                    class="w-full p-2 border border-neutral-200 rounded-md"
-                    placeholder="Enter email address"
-                  />
-                </div>
-
-                <div>
-                  <label class="block text-sm mb-1">CC:</label>
-                  <input
-                    type="email"
-                    class="w-full p-2 border border-neutral-200 rounded-md"
-                    placeholder="Additional recipients"
-                  />
-                </div>
-
-                <div>
-                  <label class="block text-sm mb-1">Subject:</label>
-                  <input
-                    type="text"
-                    class="w-full p-2 border border-neutral-200 rounded-md"
-                    value="Climate Change Impact Analysis - Final Report"
-                  />
-                </div>
-
-                <div>
-                  <label class="block text-sm mb-1">Message:</label>
-                  <textarea
-                    class="w-full p-2 border border-neutral-200 rounded-md"
-                    rows="4"
-                    placeholder="Add a message..."
-                  ></textarea>
-                </div>
-
-                <div>
-                  <label class="block text-sm mb-1">Access Settings</label>
-                  <select
-                    class="w-full p-2 border border-neutral-200 rounded-md"
-                  >
-                    <option>View only</option>
-                    <option>Download enabled</option>
-                    <option>Full access</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label class="block text-sm mb-1">Expiry Date</label>
-                  <input
-                    type="date"
-                    class="w-full p-2 border border-neutral-200 rounded-md"
-                  />
-                </div>
-
-                <div class="pt-4 space-y-2">
-                  <button
-                    type="submit"
-                    class="w-full py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
-                  >
-                    Send Document
-                  </button>
-                  <button
-                    type="button"
-                    class="w-full py-2 border border-neutral-200 rounded-md hover:bg-neutral-50"
-                  >
-                    Generate Shareable Link
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <!-- Action Buttons -->
-          <div
-            class="flex justify-between mt-8 pt-6 border-t border-neutral-200"
-          >
-            <button
-              type="button"
-              class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
-            >
-              Back to Final Draft
-            </button>
-            <a href="follow-up.html">
               <button
                 type="button"
-                class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
               >
-                Continue to Follow Up
+                Back to Final Draft
               </button>
-            </a>
+              <a href="follow-up.html">
+                <button
+                  type="button"
+                  class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                >
+                  Continue to Follow Up
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
