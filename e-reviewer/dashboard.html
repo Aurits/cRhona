@@ -579,7 +579,7 @@
 
   <body class="h-full text-base-content">
     <div id="app" class="min-h-screen bg-neutral-50 flex">
-      <!-- Sidebar -->
+      <!-- Simplified Sidebar -->
       <div
         id="sidebar"
         class="fixed left-0 top-0 h-full w-20 md:w-64 bg-white border-r border-neutral-200 flex flex-col transition-all duration-300 z-20"
@@ -602,96 +602,39 @@
                 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
               ></path>
             </svg>
-            <a href="#">
-              <span class="ml-2 text-neutral-900 hidden md:block">cRhona</span>
-            </a>
+            <span class="ml-2 text-neutral-900 hidden md:block">cRhona</span>
           </div>
-          <button
-            class="hidden md:flex items-center justify-center p-2 rounded-md text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100"
-          >
-            <i class="fa-solid fa-chevron-left text-sm"></i>
-          </button>
         </div>
 
-        <!-- Sidebar Items -->
+        <!-- Simplified Sidebar Items -->
         <div class="flex-1 overflow-y-auto py-4">
           <ul class="space-y-1">
             <li>
               <a href="dashboard.html">
-                <span
-                  class="flex items-center px-3 py-3 text-neutral-900 bg-neutral-100 border-l-2 border-neutral-900 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
-                >
-                  <i class="fa-solid fa-chart-line w-6 text-center text-lg"></i>
-
-                  <span class="ml-3 hidden md:block">Dashboard</span>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="users.html">
-                <span
-                  class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
-                >
-                  <i class="fa-solid fa-users-gear w-6 text-center text-lg"></i>
-                  <span class="ml-3 hidden md:block">Users</span>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="teams.html">
-                <span
-                  class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
-                >
-                  <i
-                    class="fa-solid fa-people-group w-6 text-center text-lg"
-                  ></i>
-                  <span class="ml-3 hidden md:block">Teams</span>
-                  <span
-                    class="ml-auto hidden md:flex items-center justify-center w-5 h-5 bg-neutral-900 text-white text-xs rounded-full"
-                    >3</span
-                  >
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="workspace.html">
               <span
-                class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
+                class="flex items-center px-3 py-3 text-neutral-900 bg-neutral-100 border-l-2 border-neutral-900 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
               >
-                <i class="fa-solid fa-briefcase w-6 text-center text-lg"></i>
-                <span class="ml-3 hidden md:block">Project Workspace</span>
+                <i class="fa-solid fa-home w-6 text-center text-lg"></i>
+                <span class="ml-3 hidden md:block">Home</span>
               </span>
-            </li>
             </a>
-            <li>
-              <a href="templates.html">
-              <span
-                class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
-              >
-                <i
-                  class="fa-solid fa-clipboard-list w-6 text-center text-lg"
-                ></i>
-                <span class="ml-3 hidden md:block">Templates</span>
-              </span>
-              </a>
             </li>
-            <li>
+            <a>
               <a href="reviewer-portal.html">
               <span
                 class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
               >
                 <i
-                  class="fa-solid fa-magnifying-glass-chart w-6 text-center text-lg"
+                  class="fa-solid fa-clipboard-check w-6 text-center text-lg"
                 ></i>
-                <span class="ml-3 hidden md:block">Reviewer Portal</span>
+                <span class="ml-3 hidden md:block">My Reviews</span>
                 <span
                   class="ml-auto hidden md:flex items-center justify-center w-5 h-5 bg-neutral-900 text-white text-xs rounded-full"
                   >2</span
                 >
               </span>
-              </a>
+            </a>
             </li>
-           
             <li>
               <a href="settings.html">
               <span
@@ -700,63 +643,21 @@
                 <i class="fa-solid fa-gear w-6 text-center text-lg"></i>
                 <span class="ml-3 hidden md:block">Settings</span>
               </span>
-              </a>
+            </a>
             </li>
           </ul>
-        </div>
-
-        <!-- Sidebar Footer -->
-        <div class="p-4 border-t border-neutral-200 hidden md:block">
-          <button
-            class="w-full flex items-center justify-center px-4 py-2 bg-neutral-900 text-white rounded-md"
-          >
-            <i class="fa-solid fa-plus mr-2"></i>
-            <span>New Project</span>
-          </button>
         </div>
       </div>
 
       <!-- Main Content -->
       <div id="main-content" class="flex-1 ml-20 md:ml-64">
-        <!-- Header -->
+        <!-- Simplified Header -->
         <header
           id="header"
-          class="fixed top-0 right-0 left-20 md:left-64 h-[72px] bg-white border-b border-neutral-200 flex items-center justify-between px-4 z-10"
+          class="fixed top-0 right-0 left-20 md:left-64 h-[72px] bg-white border-b border-neutral-200 flex items-center justify-end px-4 z-10"
         >
-          <!-- Command Palette -->
-          <div class="relative w-full max-w-xl mx-auto">
-            <div class="relative">
-              <input
-                type="text"
-                placeholder="Search or use commands..."
-                class="w-full pl-10 pr-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-neutral-300 focus:outline-none"
-              />
-              <div
-                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
-              >
-                <i class="fa-solid fa-search text-neutral-400"></i>
-              </div>
-              <div
-                class="absolute inset-y-0 right-0 pr-3 flex items-center text-neutral-400"
-              >
-                <span class="text-xs border border-neutral-300 rounded px-1"
-                  >⌘K</span
-                >
-              </div>
-            </div>
-          </div>
-
           <!-- Right Side Icons -->
           <div class="flex items-center space-x-4">
-            <button
-              class="relative p-2 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-md"
-            >
-              <i class="fa-solid fa-bell"></i>
-              <span
-                class="absolute top-0 right-0 flex h-4 w-4 items-center justify-center rounded-full bg-neutral-900 text-xs text-white"
-                >3</span
-              >
-            </button>
             <button
               class="p-2 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-md"
             >
@@ -765,480 +666,124 @@
             <div class="relative">
               <button class="flex items-center space-x-2">
                 <img
-                  src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=123"
+                  src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=789"
                   alt="User Avatar"
                   class="w-8 h-8 rounded-full"
                 />
                 <span class="hidden md:block text-sm text-neutral-700"
-                  >Peter Claver</span
+                  >Mary Vanessa</span
                 >
-                <i
-                  class="hidden md:block fa-solid fa-chevron-down text-neutral-400 text-xs"
-                ></i>
               </button>
             </div>
           </div>
         </header>
 
-        <!-- Dashboard Content -->
-        <div id="dashboard-content" class="pt-[80px] px-6 py-8">
-          <div class="max-w-7xl mx-auto">
-            <!-- Page Title -->
+        <!-- Simplified Dashboard Content -->
+        <div id="dashboard-content" class="pt-[72px] px-6 py-8">
+          <div class="max-w-4xl mx-auto">
+            <!-- Welcome Message -->
             <div class="mb-8">
-              <h1 class="text-2xl text-neutral-900">Dashboard</h1>
+              <h1 class="text-2xl text-neutral-900">Welcome, Mary</h1>
               <p class="text-neutral-600 mt-1">
-                Welcome back, Peter. Here's your research synthesis overview.
+                Thank you for contributing as an external reviewer.
               </p>
             </div>
 
-            <!-- KPI Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div
-                class="bg-white p-6 rounded-lg border border-neutral-200 shadow-sm"
-              >
-                <div class="flex items-center justify-between mb-4">
-                  <h2 class="text-lg text-neutral-900">Active Projects</h2>
-                  <span class="text-2xl text-neutral-900">7</span>
-                </div>
-                <div class="space-y-3">
-                  <div>
-                    <div class="flex justify-between text-sm mb-1">
-                      <span class="text-neutral-600">In Progress</span>
-                      <span class="text-neutral-900">4/7</span>
-                    </div>
-                    <div class="w-full bg-neutral-200 rounded-full h-2">
-                      <div
-                        class="bg-neutral-800 h-2 rounded-full"
-                        style="width: 57%"
-                      ></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="flex justify-between text-sm mb-1">
-                      <span class="text-neutral-600">On Schedule</span>
-                      <span class="text-neutral-900">5/7</span>
-                    </div>
-                    <div class="w-full bg-neutral-200 rounded-full h-2">
-                      <div
-                        class="bg-neutral-800 h-2 rounded-full"
-                        style="width: 71%"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="bg-white p-6 rounded-lg border border-neutral-200 shadow-sm"
-              >
-                <div class="flex items-center justify-between mb-4">
-                  <h2 class="text-lg text-neutral-900">Pending Reviews</h2>
-                  <span class="text-2xl text-neutral-900">5</span>
-                </div>
-                <div class="space-y-2">
-                  <div class="flex items-center justify-between">
-                    <span class="text-sm text-neutral-600">Internal</span>
-                    <span class="text-sm text-neutral-900">3</span>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <span class="text-sm text-neutral-600">External</span>
-                    <span class="text-sm text-neutral-900">2</span>
-                  </div>
-                  <div class="mt-3">
-                    <button
-                      class="text-sm text-neutral-700 hover:text-neutral-900 flex items-center"
-                    >
-                      <span>View all reviews</span>
-                      <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="bg-white p-6 rounded-lg border border-neutral-200 shadow-sm"
-              >
-                <div class="flex items-center justify-between mb-4">
-                  <h2 class="text-lg text-neutral-900">Completed Briefs</h2>
-                  <span class="text-2xl text-neutral-900">12</span>
-                </div>
-                <div class="space-y-2">
-                  <div class="flex items-center justify-between">
-                    <span class="text-sm text-neutral-600">This Quarter</span>
-                    <span class="text-sm text-neutral-900">8</span>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <span class="text-sm text-neutral-600">Last Quarter</span>
-                    <span class="text-sm text-neutral-900">4</span>
-                  </div>
-                  <div class="mt-3">
-                    <button
-                      class="text-sm text-neutral-700 hover:text-neutral-900 flex items-center"
-                    >
-                      <span>View all briefs</span>
-                      <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Recent Projects -->
+            <!-- Pending Reviews -->
             <div class="mb-8">
-              <div class="flex justify-between items-center mb-4">
-                <h2 class="text-xl text-neutral-900">Recent Projects</h2>
-                <button
-                  class="text-sm text-neutral-700 hover:text-neutral-900 flex items-center"
-                >
-                  <span>View all projects</span>
-                  <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
-                </button>
-              </div>
-
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Project Card 1 -->
+              <h2 class="text-xl text-neutral-900 mb-4">Pending Reviews</h2>
+              <div class="space-y-4">
+                <!-- Review Item 1 -->
                 <div
-                  class="bg-white p-5 rounded-lg border border-neutral-200 shadow-sm"
+                  class="bg-white p-6 rounded-lg border border-neutral-200 shadow-sm"
                 >
                   <div class="flex justify-between items-start mb-3">
                     <div>
-                      <h3 class="text-neutral-900">
+                      <h3 class="text-lg text-neutral-900">
                         Maternal Health Policy Brief
                       </h3>
                       <p class="text-sm text-neutral-600">
-                        Updated: April 23, 2025
+                        Requested: April 20, 2025
                       </p>
                     </div>
                     <span
-                      class="px-2 py-1 bg-neutral-100 text-neutral-700 text-xs rounded-full"
-                      >In Review</span
+                      class="px-3 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
+                      >Due in 5 days</span
                     >
                   </div>
-                  <div class="space-y-3">
-                    <div>
-                      <div class="flex justify-between text-sm mb-1">
-                        <span class="text-neutral-600">Progress</span>
-                        <span class="text-neutral-900">75%</span>
-                      </div>
-                      <div class="w-full bg-neutral-200 rounded-full h-2">
-                        <div
-                          class="bg-neutral-800 h-2 rounded-full"
-                          style="width: 75%"
-                        ></div>
-                      </div>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                      <div class="flex -space-x-2">
-                        <img
-                          src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=111"
-                          alt="Team Member"
-                          class="w-6 h-6 rounded-full border border-white"
-                        />
-                        <img
-                          src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=222"
-                          alt="Team Member"
-                          class="w-6 h-6 rounded-full border border-white"
-                        />
-                        <img
-                          src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=333"
-                          alt="Team Member"
-                          class="w-6 h-6 rounded-full border border-white"
-                        />
-                      </div>
-                      <span class="text-neutral-600">Due: May 10, 2025</span>
-                    </div>
-                  </div>
+                  <p class="text-neutral-600 mb-4">
+                    A comprehensive review of maternal health interventions in
+                    rural areas.
+                  </p>
+                  <button
+                    class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                  >
+                    Start Review
+                  </button>
                 </div>
 
-                <!-- Project Card 2 -->
+                <!-- Review Item 2 -->
                 <div
-                  class="bg-white p-5 rounded-lg border border-neutral-200 shadow-sm"
+                  class="bg-white p-6 rounded-lg border border-neutral-200 shadow-sm"
                 >
                   <div class="flex justify-between items-start mb-3">
                     <div>
-                      <h3 class="text-neutral-900">Vaccine Efficacy Summary</h3>
-                      <p class="text-sm text-neutral-600">
-                        Updated: April 20, 2025
-                      </p>
-                    </div>
-                    <span
-                      class="px-2 py-1 bg-neutral-100 text-neutral-700 text-xs rounded-full"
-                      >Extraction</span
-                    >
-                  </div>
-                  <div class="space-y-3">
-                    <div>
-                      <div class="flex justify-between text-sm mb-1">
-                        <span class="text-neutral-600">Progress</span>
-                        <span class="text-neutral-900">45%</span>
-                      </div>
-                      <div class="w-full bg-neutral-200 rounded-full h-2">
-                        <div
-                          class="bg-neutral-800 h-2 rounded-full"
-                          style="width: 45%"
-                        ></div>
-                      </div>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                      <div class="flex -space-x-2">
-                        <img
-                          src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=444"
-                          alt="Team Member"
-                          class="w-6 h-6 rounded-full border border-white"
-                        />
-                        <img
-                          src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=555"
-                          alt="Team Member"
-                          class="w-6 h-6 rounded-full border border-white"
-                        />
-                      </div>
-                      <span class="text-neutral-600">Due: May 15, 2025</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Project Card 3 -->
-                <div
-                  class="bg-white p-5 rounded-lg border border-neutral-200 shadow-sm"
-                >
-                  <div class="flex justify-between items-start mb-3">
-                    <div>
-                      <h3 class="text-neutral-900">
-                        Antibiotic Resistance Report
+                      <h3 class="text-lg text-neutral-900">
+                        COVID-19 Treatment Protocol
                       </h3>
                       <p class="text-sm text-neutral-600">
-                        Updated: April 18, 2025
+                        Requested: April 22, 2025
                       </p>
                     </div>
                     <span
-                      class="px-2 py-1 bg-neutral-100 text-neutral-700 text-xs rounded-full"
-                      >Synthesis</span
+                      class="px-3 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
+                      >Due in 7 days</span
                     >
                   </div>
-                  <div class="space-y-3">
-                    <div>
-                      <div class="flex justify-between text-sm mb-1">
-                        <span class="text-neutral-600">Progress</span>
-                        <span class="text-neutral-900">60%</span>
-                      </div>
-                      <div class="w-full bg-neutral-200 rounded-full h-2">
-                        <div
-                          class="bg-neutral-800 h-2 rounded-full"
-                          style="width: 60%"
-                        ></div>
-                      </div>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                      <div class="flex -space-x-2">
-                        <img
-                          src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=666"
-                          alt="Team Member"
-                          class="w-6 h-6 rounded-full border border-white"
-                        />
-                        <img
-                          src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=777"
-                          alt="Team Member"
-                          class="w-6 h-6 rounded-full border border-white"
-                        />
-                        <img
-                          src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=888"
-                          alt="Team Member"
-                          class="w-6 h-6 rounded-full border border-white"
-                        />
-                      </div>
-                      <span class="text-neutral-600">Due: April 30, 2025</span>
-                    </div>
-                  </div>
+                  <p class="text-neutral-600 mb-4">
+                    Updated guidelines for COVID-19 treatment in primary
+                    healthcare settings.
+                  </p>
+                  <button
+                    class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                  >
+                    Start Review
+                  </button>
                 </div>
               </div>
             </div>
 
-            <!-- Activity Timeline and Quick Actions -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <!-- Activity Timeline -->
+            <!-- Recently Completed -->
+            <div>
+              <h2 class="text-xl text-neutral-900 mb-4">Recently Completed</h2>
               <div
-                class="lg:col-span-2 bg-white rounded-lg border border-neutral-200 shadow-sm p-6"
+                class="bg-white rounded-lg border border-neutral-200 shadow-sm divide-y divide-neutral-200"
               >
-                <h2 class="text-xl text-neutral-900 mb-4">
-                  Live Activity Timeline
-                </h2>
-
-                <div class="space-y-4">
-                  <!-- Activity Item 1 -->
-                  <div class="flex">
-                    <div class="flex-shrink-0 mr-3">
-                      <img
-                        src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=111"
-                        alt="User Avatar"
-                        class="w-8 h-8 rounded-full"
-                      />
-                    </div>
-                    <div class="flex-1 bg-neutral-50 rounded-lg p-3">
-                      <div class="flex items-center justify-between mb-1">
-                        <span class="text-neutral-900">Ambrose Alanda</span>
-                        <span class="text-xs text-neutral-500"
-                          >10 minutes ago</span
-                        >
-                      </div>
-                      <p class="text-sm text-neutral-700">
-                        Completed extraction for "Vaccine Efficacy Summary"
-                        project
-                      </p>
-                      <div
-                        class="flex items-center mt-2 text-xs text-neutral-600"
-                      >
-                        <i class="fa-solid fa-file-lines mr-1"></i>
-                        <span>Vaccine Efficacy Summary</span>
-                      </div>
-                    </div>
+                <div class="p-4 flex items-center justify-between">
+                  <div>
+                    <h3 class="text-neutral-900">
+                      Antibiotic Resistance Report
+                    </h3>
+                    <p class="text-sm text-neutral-600">
+                      Completed: April 15, 2025
+                    </p>
                   </div>
-
-                  <!-- Activity Item 2 -->
-                  <div class="flex">
-                    <div class="flex-shrink-0 mr-3">
-                      <img
-                        src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=222"
-                        alt="User Avatar"
-                        class="w-8 h-8 rounded-full"
-                      />
-                    </div>
-                    <div class="flex-1 bg-neutral-50 rounded-lg p-3">
-                      <div class="flex items-center justify-between mb-1">
-                        <span class="text-neutral-900">Mary Vanessa</span>
-                        <span class="text-xs text-neutral-500"
-                          >32 minutes ago</span
-                        >
-                      </div>
-                      <p class="text-sm text-neutral-700">
-                        Added comments to "Maternal Health Policy Brief" draft
-                      </p>
-                      <div
-                        class="flex items-center mt-2 text-xs text-neutral-600"
-                      >
-                        <i class="fa-solid fa-comment mr-1"></i>
-                        <span>3 comments added</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Activity Item 3 -->
-                  <div class="flex">
-                    <div class="flex-shrink-0 mr-3">
-                      <img
-                        src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=333"
-                        alt="User Avatar"
-                        class="w-8 h-8 rounded-full"
-                      />
-                    </div>
-                    <div class="flex-1 bg-neutral-50 rounded-lg p-3">
-                      <div class="flex items-center justify-between mb-1">
-                        <span class="text-neutral-900">Peter Claver</span>
-                        <span class="text-xs text-neutral-500">1 hour ago</span>
-                      </div>
-                      <p class="text-sm text-neutral-700">
-                        Started new project "Mental Health Interventions"
-                      </p>
-                      <div
-                        class="flex items-center mt-2 text-xs text-neutral-600"
-                      >
-                        <i class="fa-solid fa-plus mr-1"></i>
-                        <span>New project created</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Activity Item 4 -->
-                  <div class="flex">
-                    <div class="flex-shrink-0 mr-3">
-                      <img
-                        src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=444"
-                        alt="User Avatar"
-                        class="w-8 h-8 rounded-full"
-                      />
-                    </div>
-                    <div class="flex-1 bg-neutral-50 rounded-lg p-3">
-                      <div class="flex items-center justify-between mb-1">
-                        <span class="text-neutral-900">Ambrose Alanda</span>
-                        <span class="text-xs text-neutral-500"
-                          >2 hours ago</span
-                        >
-                      </div>
-                      <p class="text-sm text-neutral-700">
-                        Approved final draft of "COVID-19 Policy Summary"
-                      </p>
-                      <div
-                        class="flex items-center mt-2 text-xs text-neutral-600"
-                      >
-                        <i class="fa-solid fa-check-circle mr-1"></i>
-                        <span>Final approval</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <button
-                  class="w-full mt-4 text-sm text-neutral-700 hover:text-neutral-900 flex items-center justify-center"
-                >
-                  <span>View all activity</span>
-                  <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
-                </button>
-              </div>
-
-              <!-- Quick Actions -->
-              <div
-                class="bg-white rounded-lg border border-neutral-200 shadow-sm p-6"
-              >
-                <h2 class="text-xl text-neutral-900 mb-4">Quick Actions</h2>
-
-                <div class="space-y-3">
-                  <button
-                    class="w-full flex items-center justify-center px-4 py-3 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
-                  >
-                    <i class="fa-solid fa-plus mr-2"></i>
-                    <span>Start New Project</span>
-                  </button>
-
-                  <button
-                    class="w-full flex items-center justify-center px-4 py-3 bg-white border border-neutral-300 text-neutral-700 rounded-md hover:bg-neutral-50"
-                  >
-                    <i class="fa-solid fa-user-plus mr-2"></i>
-                    <span>Invite Team Member</span>
-                  </button>
-
-                  <button
-                    class="w-full flex items-center justify-center px-4 py-3 bg-white border border-neutral-300 text-neutral-700 rounded-md hover:bg-neutral-50"
-                  >
-                    <i class="fa-solid fa-file-alt mr-2"></i>
-                    <span>View Templates</span>
+                  <button class="text-neutral-600 hover:text-neutral-900">
+                    <i class="fa-solid fa-eye"></i>
                   </button>
                 </div>
-
-                <div class="mt-6 border-t border-neutral-200 pt-4">
-                  <h3 class="text-neutral-900 mb-3">Upcoming Deadlines</h3>
-
-                  <div class="space-y-3">
-                    <div class="flex items-center justify-between">
-                      <div>
-                        <p class="text-sm text-neutral-900">
-                          Maternal Health Brief
-                        </p>
-                        <p class="text-xs text-neutral-600">Review phase</p>
-                      </div>
-                      <span class="text-sm text-neutral-700">May 10, 2025</span>
-                    </div>
-
-                    <div class="flex items-center justify-between">
-                      <div>
-                        <p class="text-sm text-neutral-900">
-                          Antibiotic Report
-                        </p>
-                        <p class="text-xs text-neutral-600">Synthesis phase</p>
-                      </div>
-                      <span class="text-sm text-neutral-700"
-                        >April 30, 2025</span
-                      >
-                    </div>
+                <div class="p-4 flex items-center justify-between">
+                  <div>
+                    <h3 class="text-neutral-900">
+                      Mental Health Interventions
+                    </h3>
+                    <p class="text-sm text-neutral-600">
+                      Completed: April 10, 2025
+                    </p>
                   </div>
+                  <button class="text-neutral-600 hover:text-neutral-900">
+                    <i class="fa-solid fa-eye"></i>
+                  </button>
                 </div>
               </div>
             </div>

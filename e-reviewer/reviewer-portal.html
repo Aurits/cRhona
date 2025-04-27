@@ -579,12 +579,12 @@
 
   <body class="h-full text-base-content">
     <div id="app" class="min-h-screen bg-neutral-50 flex">
-      <!-- Sidebar -->
+      <!-- Sidebar remains the same -->
       <div
         id="sidebar"
         class="fixed left-0 top-0 h-full w-20 md:w-64 bg-white border-r border-neutral-200 flex flex-col transition-all duration-300 z-20"
       >
-        <!-- Logo -->
+        <!-- Previous sidebar content -->
         <div
           class="flex items-center justify-center md:justify-between px-4 h-[72px] border-b border-neutral-200"
         >
@@ -602,18 +602,10 @@
                 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
               ></path>
             </svg>
-            <a href="#">
-              <span class="ml-2 text-neutral-900 hidden md:block">cRhona</span>
-            </a>
+            <span class="ml-2 text-neutral-900 hidden md:block">cRhona</span>
           </div>
-          <button
-            class="hidden md:flex items-center justify-center p-2 rounded-md text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100"
-          >
-            <i class="fa-solid fa-chevron-left text-sm"></i>
-          </button>
         </div>
 
-        <!-- Sidebar Items -->
         <div class="flex-1 overflow-y-auto py-4">
           <ul class="space-y-1">
             <li>
@@ -621,142 +613,49 @@
                 <span
                   class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
                 >
-                  <i class="fa-solid fa-chart-line w-6 text-center text-lg"></i>
-
-                  <span class="ml-3 hidden md:block">Dashboard</span>
+                  <i class="fa-solid fa-home w-6 text-center text-lg"></i>
+                  <span class="ml-3 hidden md:block">Home</span>
                 </span>
               </a>
             </li>
             <li>
-              <a href="users.html">
+              <a href="reviewer-portal.html">
                 <span
-                  class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
-                >
-                  <i class="fa-solid fa-users-gear w-6 text-center text-lg"></i>
-                  <span class="ml-3 hidden md:block">Users</span>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="teams.html">
-                <span
-                  class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
+                  class="flex items-center px-3 py-3 text-neutral-900 bg-neutral-100 border-l-2 border-neutral-900 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
                 >
                   <i
-                    class="fa-solid fa-people-group w-6 text-center text-lg"
+                    class="fa-solid fa-clipboard-check w-6 text-center text-lg"
                   ></i>
-                  <span class="ml-3 hidden md:block">Teams</span>
+                  <span class="ml-3 hidden md:block">My Reviews</span>
                   <span
                     class="ml-auto hidden md:flex items-center justify-center w-5 h-5 bg-neutral-900 text-white text-xs rounded-full"
-                    >3</span
+                    >2</span
                   >
                 </span>
               </a>
             </li>
             <li>
-              <a href="workspace.html">
-              <span
-                class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
-              >
-                <i class="fa-solid fa-briefcase w-6 text-center text-lg"></i>
-                <span class="ml-3 hidden md:block">Project Workspace</span>
-              </span>
-            </li>
-            </a>
-            <li>
-              <a href="templates.html">
-              <span
-                class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
-              >
-                <i
-                  class="fa-solid fa-clipboard-list w-6 text-center text-lg"
-                ></i>
-                <span class="ml-3 hidden md:block">Templates</span>
-              </span>
-              </a>
-            </li>
-            <li>
-              <a href="reviewer-portal.html">
-              <span
-                class="flex items-center px-3 py-3 text-neutral-900 bg-neutral-100 border-l-2 border-neutral-900 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
-              >
-                <i
-                  class="fa-solid fa-magnifying-glass-chart w-6 text-center text-lg"
-                ></i>
-                <span class="ml-3 hidden md:block">Reviewer Portal</span>
-                <span
-                  class="ml-auto hidden md:flex items-center justify-center w-5 h-5 bg-neutral-900 text-white text-xs rounded-full"
-                  >2</span
-                >
-              </span>
-              </a>
-            </li>
-            
-            <li>
               <a href="settings.html">
-              <span
-                class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
-              >
-                <i class="fa-solid fa-gear w-6 text-center text-lg"></i>
-                <span class="ml-3 hidden md:block">Settings</span>
-              </span>
+                <span
+                  class="flex items-center px-3 py-3 text-neutral-600 hover:bg-neutral-100 md:mx-2 rounded-md md:rounded-lg cursor-pointer"
+                >
+                  <i class="fa-solid fa-gear w-6 text-center text-lg"></i>
+                  <span class="ml-3 hidden md:block">Settings</span>
+                </span>
               </a>
             </li>
           </ul>
-        </div>
-
-        <!-- Sidebar Footer -->
-        <div class="p-4 border-t border-neutral-200 hidden md:block">
-          <button
-            class="w-full flex items-center justify-center px-4 py-2 bg-neutral-900 text-white rounded-md"
-          >
-            <i class="fa-solid fa-plus mr-2"></i>
-            <span>New Project</span>
-          </button>
         </div>
       </div>
 
       <!-- Main Content -->
       <div id="main-content" class="flex-1 ml-20 md:ml-64">
-        <!-- Header -->
+        <!-- Header remains the same -->
         <header
           id="header"
-          class="fixed top-0 right-0 left-20 md:left-64 h-[72px] bg-white border-b border-neutral-200 flex items-center justify-between px-4 z-10"
+          class="fixed top-0 right-0 left-20 md:left-64 h-[72px] bg-white border-b border-neutral-200 flex items-center justify-end px-4 z-10"
         >
-          <!-- Command Palette -->
-          <div class="relative w-full max-w-xl mx-auto">
-            <div class="relative">
-              <input
-                type="text"
-                placeholder="Search or use commands..."
-                class="w-full pl-10 pr-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-neutral-300 focus:outline-none"
-              />
-              <div
-                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
-              >
-                <i class="fa-solid fa-search text-neutral-400"></i>
-              </div>
-              <div
-                class="absolute inset-y-0 right-0 pr-3 flex items-center text-neutral-400"
-              >
-                <span class="text-xs border border-neutral-300 rounded px-1"
-                  >⌘K</span
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Side Icons -->
           <div class="flex items-center space-x-4">
-            <button
-              class="relative p-2 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-md"
-            >
-              <i class="fa-solid fa-bell"></i>
-              <span
-                class="absolute top-0 right-0 flex h-4 w-4 items-center justify-center rounded-full bg-neutral-900 text-xs text-white"
-                >3</span
-              >
-            </button>
             <button
               class="p-2 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-md"
             >
@@ -765,161 +664,238 @@
             <div class="relative">
               <button class="flex items-center space-x-2">
                 <img
-                  src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=123"
+                  src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=789"
                   alt="User Avatar"
                   class="w-8 h-8 rounded-full"
                 />
                 <span class="hidden md:block text-sm text-neutral-700"
-                  >Peter Claver</span
+                  >Mary Vanessa</span
                 >
-                <i
-                  class="hidden md:block fa-solid fa-chevron-down text-neutral-400 text-xs"
-                ></i>
               </button>
             </div>
           </div>
         </header>
 
-      <!-- Main Content -->
-      <div id="reviewer-portal" class="pt-[80px] px-6 py-8 w-full">
-        <div class="max-w-7xl mx-auto">
-          <!-- Header -->
-          <div class="flex justify-between items-center mb-8">
-            <div>
-              <h1 class="text-2xl text-neutral-900">Reviewer Portal</h1>
-              <p class="text-neutral-600">
-                Manage and track review assignments
-              </p>
-            </div>
-            <div class="flex gap-4">
-              <select class="px-4 py-2 border border-neutral-200 rounded-md">
-                <option>All Reviews</option>
-                <option>Internal Reviews</option>
-                <option>External Reviews</option>
-              </select>
-              <button
-                class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
-              >
-                <i class="fa-solid fa-plus mr-2"></i>New Review
-              </button>
-            </div>
-          </div>
-
-          <!-- Review Stats -->
-          <div class="grid grid-cols-4 gap-6 mb-8">
-            <div class="bg-white p-6 rounded-lg border border-neutral-200">
-              <h3 class="text-neutral-600 mb-2">Pending Reviews</h3>
-              <p class="text-3xl">12</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg border border-neutral-200">
-              <h3 class="text-neutral-600 mb-2">In Progress</h3>
-              <p class="text-3xl">5</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg border border-neutral-200">
-              <h3 class="text-neutral-600 mb-2">Completed</h3>
-              <p class="text-3xl">28</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg border border-neutral-200">
-              <h3 class="text-neutral-600 mb-2">Avg. Time</h3>
-              <p class="text-3xl">3.2d</p>
-            </div>
-          </div>
-
-          <!-- Active Reviews -->
-          <div class="bg-white rounded-lg border border-neutral-200 mb-8">
-            <div class="p-6 border-b border-neutral-200">
-              <h2 class="text-xl">Active Reviews</h2>
-            </div>
-            <div class="divide-y divide-neutral-100">
-              <div class="p-6 flex items-center justify-between">
-                <div class="flex items-center gap-6">
-                  <div class="w-[120px]">
-                    <span
-                      class="px-3 py-1 bg-neutral-100 text-neutral-600 rounded-full text-sm"
-                      >In Progress</span
-                    >
-                  </div>
-                  <div>
-                    <h3>Healthcare Policy Review</h3>
-                    <p class="text-sm text-neutral-600">
-                      Assigned to Peter Claver • Due Apr 28, 2025
-                    </p>
-                  </div>
-                </div>
-                <div class="flex items-center gap-4">
-                  <div class="text-sm text-neutral-600">2/5 items reviewed</div>
-                  <button
-                    class="px-4 py-2 border border-neutral-200 rounded-md hover:bg-neutral-50"
-                  >
-                    Continue Review
-                  </button>
-                </div>
+        <!-- Reviews Content -->
+        <div id="reviews-content" class="pt-[72px] px-6 py-8">
+          <div class="max-w-6xl mx-auto">
+            <!-- Page Header -->
+            <div class="flex justify-between items-center mb-8">
+              <div>
+                <h1 class="text-2xl text-neutral-900">Review Workspace</h1>
+                <p class="text-neutral-600 mt-1">
+                  You have 2 pending reviews to complete
+                </p>
               </div>
-
-              <div class="p-6 flex items-center justify-between">
-                <div class="flex items-center gap-6">
-                  <div class="w-[120px]">
-                    <span
-                      class="px-3 py-1 bg-neutral-100 text-neutral-600 rounded-full text-sm"
-                      >Pending</span
-                    >
-                  </div>
-                  <div>
-                    <h3>Education Policy Brief</h3>
-                    <p class="text-sm text-neutral-600">
-                      Assigned to Mary Vanessa • Due May 2, 2025
-                    </p>
-                  </div>
-                </div>
-                <div class="flex items-center gap-4">
-                  <div class="text-sm text-neutral-600">0/3 items reviewed</div>
-                  <button
-                    class="px-4 py-2 border border-neutral-200 rounded-md hover:bg-neutral-50"
-                  >
-                    Start Review
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Document Viewer -->
-          <div class="bg-white rounded-lg border border-neutral-200">
-            <div
-              class="p-6 border-b border-neutral-200 flex justify-between items-center"
-            >
-              <h2 class="text-xl">Current Document</h2>
-              <div class="flex gap-4">
-                <button class="p-2 hover:bg-neutral-100 rounded">
-                  <i class="fa-regular fa-comment"></i>
+              <div class="flex items-center space-x-2">
+                <button
+                  class="px-3 py-2 text-neutral-600 hover:text-neutral-900 bg-white border border-neutral-200 rounded-md flex items-center"
+                >
+                  <i class="fa-solid fa-filter mr-2"></i>
+                  <span>Filter</span>
                 </button>
-                <button class="p-2 hover:bg-neutral-100 rounded">
-                  <i class="fa-regular fa-bookmark"></i>
-                </button>
-                <button class="p-2 hover:bg-neutral-100 rounded">
-                  <i class="fa-solid fa-download"></i>
+                <button
+                  class="px-3 py-2 text-neutral-600 hover:text-neutral-900 bg-white border border-neutral-200 rounded-md flex items-center"
+                >
+                  <i class="fa-solid fa-sort mr-2"></i>
+                  <span>Sort</span>
                 </button>
               </div>
             </div>
-            <div class="p-6">
+
+            <!-- Review Document Viewer -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <!-- Document List -->
               <div
-                class="h-[400px] bg-neutral-100 rounded-lg flex items-center justify-center text-neutral-600"
+                class="bg-white rounded-lg border border-neutral-200 shadow-sm p-4"
               >
-                Document Preview Area
+                <h2 class="text-lg text-neutral-900 mb-4">
+                  Documents for Review
+                </h2>
+                <div class="space-y-3">
+                  <!-- Active Document -->
+                  <div
+                    class="p-3 bg-neutral-100 rounded-lg border-l-4 border-neutral-900"
+                  >
+                    <div class="flex items-start justify-between">
+                      <div>
+                        <h3 class="text-neutral-900">
+                          Maternal Health Policy Brief
+                        </h3>
+                        <p class="text-sm text-neutral-600">
+                          Due: April 25, 2025
+                        </p>
+                      </div>
+                      <span
+                        class="px-2 py-1 bg-neutral-900 text-white text-xs rounded-full"
+                        >Active</span
+                      >
+                    </div>
+                    <div
+                      class="mt-2 flex items-center text-sm text-neutral-600"
+                    >
+                      <i class="fa-regular fa-clock mr-1"></i>
+                      <span>Time remaining: 5 days</span>
+                    </div>
+                  </div>
+
+                  <!-- Pending Document -->
+                  <div
+                    class="p-3 bg-white rounded-lg border border-neutral-200 hover:bg-neutral-50 cursor-pointer"
+                  >
+                    <div class="flex items-start justify-between">
+                      <div>
+                        <h3 class="text-neutral-900">
+                          COVID-19 Treatment Protocol
+                        </h3>
+                        <p class="text-sm text-neutral-600">
+                          Due: April 27, 2025
+                        </p>
+                      </div>
+                      <span
+                        class="px-2 py-1 bg-neutral-100 text-neutral-600 text-xs rounded-full"
+                        >Pending</span
+                      >
+                    </div>
+                    <div
+                      class="mt-2 flex items-center text-sm text-neutral-600"
+                    >
+                      <i class="fa-regular fa-clock mr-1"></i>
+                      <span>Time remaining: 7 days</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="p-6 border-t border-neutral-200">
-              <div class="flex gap-4">
-                <button
-                  class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
-                >
-                  Approve Document
-                </button>
-                <button
-                  class="px-4 py-2 border border-neutral-200 rounded-md hover:bg-neutral-50"
-                >
-                  Request Changes
-                </button>
+
+              <!-- Document Content -->
+              <div
+                class="lg:col-span-2 bg-white rounded-lg border border-neutral-200 shadow-sm"
+              >
+                <div class="border-b border-neutral-200 p-4">
+                  <div class="flex items-center justify-between">
+                    <h2 class="text-lg text-neutral-900">
+                      Maternal Health Policy Brief
+                    </h2>
+                    <div class="flex items-center space-x-2">
+                      <button
+                        class="p-2 text-neutral-600 hover:text-neutral-900 bg-neutral-50 rounded-md"
+                      >
+                        <i class="fa-solid fa-expand"></i>
+                      </button>
+                      <button
+                        class="p-2 text-neutral-600 hover:text-neutral-900 bg-neutral-50 rounded-md"
+                      >
+                        <i class="fa-solid fa-download"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="p-6 space-y-6">
+                  <!-- Document Section -->
+                  <div class="space-y-4">
+                    <h3 class="text-lg text-neutral-900">Executive Summary</h3>
+                    <p class="text-neutral-700 leading-relaxed">
+                      This policy brief addresses the critical challenges in
+                      maternal healthcare delivery in rural areas, focusing on
+                      accessibility, quality of care, and outcomes improvement.
+                    </p>
+                    <button
+                      class="text-sm text-neutral-600 hover:text-neutral-900 flex items-center"
+                    >
+                      <i class="fa-regular fa-comment mr-1"></i>
+                      <span>Add comment</span>
+                    </button>
+                  </div>
+
+                  <!-- Review Form -->
+                  <div class="border-t border-neutral-200 pt-6">
+                    <h3 class="text-lg text-neutral-900 mb-4">
+                      Review Feedback
+                    </h3>
+
+                    <div class="space-y-4">
+                      <!-- Quality Assessment -->
+                      <div class="space-y-2">
+                        <label class="text-sm text-neutral-700"
+                          >Quality Assessment</label
+                        >
+                        <div class="flex items-center space-x-4">
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              name="quality"
+                              class="w-4 h-4 text-neutral-900 border-neutral-300 focus:ring-neutral-900"
+                            />
+                            <label class="ml-2 text-sm text-neutral-600"
+                              >Excellent</label
+                            >
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              name="quality"
+                              class="w-4 h-4 text-neutral-900 border-neutral-300 focus:ring-neutral-900"
+                            />
+                            <label class="ml-2 text-sm text-neutral-600"
+                              >Good</label
+                            >
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="radio"
+                              name="quality"
+                              class="w-4 h-4 text-neutral-900 border-neutral-300 focus:ring-neutral-900"
+                            />
+                            <label class="ml-2 text-sm text-neutral-600"
+                              >Needs Improvement</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Comments -->
+                      <div class="space-y-2">
+                        <label class="text-sm text-neutral-700"
+                          >Detailed Feedback</label
+                        >
+                        <textarea
+                          class="w-full h-32 px-3 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-neutral-900 focus:outline-none"
+                          placeholder="Enter your detailed feedback here..."
+                        ></textarea>
+                      </div>
+
+                      <!-- Recommendation -->
+                      <div class="space-y-2">
+                        <label class="text-sm text-neutral-700"
+                          >Recommendation</label
+                        >
+                        <select
+                          class="w-full px-3 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-neutral-900 focus:outline-none"
+                        >
+                          <option>Select recommendation</option>
+                          <option>Approve</option>
+                          <option>Minor Revision</option>
+                          <option>Major Revision</option>
+                          <option>Reject</option>
+                        </select>
+                      </div>
+
+                      <div class="flex justify-end space-x-3">
+                        <button
+                          class="px-4 py-2 text-neutral-600 hover:text-neutral-900 bg-white border border-neutral-200 rounded-md"
+                        >
+                          Save Draft
+                        </button>
+                        <button
+                          class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                        >
+                          Submit Review
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
