@@ -579,68 +579,244 @@
 
   <body class="h-full text-base-content">
     <div id="app" class="min-h-screen bg-neutral-50 flex">
-      <!-- Project Workspace Content -->
-      <div id="workspace-content" class="pt-[72px] px-6 py-8 w-full">
+      <!-- Project Steps Sidebar -->
+      <div
+        class="fixed left-0 top-[0px] h-full w-[240px] bg-white border-r border-neutral-200 overflow-y-auto"
+      >
+        <!-- Main App Sidebar -->
+        <div class="p-4 border-b border-neutral-200">
+          <div class="flex items-center justify-between">
+            <span class="text-sm">Main Navigation</span>
+            <button class="text-neutral-500 hover:text-neutral-700">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+          </div>
+          <div class="mt-2 space-y-1 opacity-50">
+            <a href="../dashboard.html">
+              <div class="flex items-center space-x-3 p-2 rounded-md">
+                <i class="fa-solid fa-home"></i>
+                <span>Dashboard</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project Steps -->
+        <div class="p-4">
+          <div class="text-sm mb-4">Project Steps</div>
+          <div class="space-y-1">
+            <!-- All 14 Steps with Links -->
+            <a
+              href="qn-capture.html"
+              class="flex items-center space-x-3 p-2 rounded-md bg-neutral-100 hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-1"></i>
+              <span>Question Capture</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div id="workspace-content" class="ml-[240px] pt-[0px] px-6 py-8 w-full">
         <div class="max-w-7xl mx-auto">
-          <!-- Progress Tracker -->
-          <div class="mb-8">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center">
-                <span
-                  class="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-900 text-white"
-                  >1</span
-                >
-                <div class="ml-3">
-                  <h2 class="text-lg text-neutral-900">Question Capture</h2>
-                  <p class="text-sm text-neutral-600">Step 1 of 12</p>
+          <!-- Progress Bar Section -->
+          <div class="mb-8 bg-white rounded-lg border border-neutral-200 p-6">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center space-x-4">
+                <div class="flex items-center">
+                  <span
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-900 text-white text-lg"
+                    >1</span
+                  >
+                  <div class="ml-4">
+                    <h2 class="text-xl">Question Capture</h2>
+                    <p class="text-sm text-neutral-600">Step 1 of 14</p>
+                  </div>
                 </div>
               </div>
-              <div class="flex space-x-2">
+              <div class="flex items-center space-x-3">
                 <span
                   class="px-3 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
                   >Draft</span
                 >
-              </div>
-            </div>
-
-            <!-- Progress Bar -->
-            <div class="mt-4 h-2 bg-neutral-200 rounded-full">
-              <div
-                class="h-2 bg-neutral-900 rounded-full"
-                style="width: 8%"
-              ></div>
-            </div>
-          </div>
-
-          <!-- Form Section -->
-          <div class="space-y-8">
-            <!-- User Selection -->
-            <div class="bg-white rounded-lg border border-neutral-200 p-6">
-              <h3 class="text-xl mb-6">Select Existing User</h3>
-              <div class="flex items-center space-x-4">
-                <select
-                  class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-neutral-300 focus:outline-none"
-                >
-                  <option value="">Select a user...</option>
-                  <option value="1">Peter Claver - Research Lead</option>
-                  <option value="2">Ambrose Alanda - Policy Maker</option>
-                  <option value="3">
-                    Mary Vanessa - Healthcare Researcher
-                  </option>
-                </select>
-                <button
-                  type="button"
-                  class="px-4 py-2 bg-neutral-800 text-white rounded-md hover:bg-neutral-700"
-                >
-                  Reload
+                <button class="p-2 hover:bg-neutral-100 rounded-full">
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
                 </button>
               </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- New Progress Steps -->
+            <div class="relative mb-8">
+              <div class="absolute top-4 w-full h-0.5 bg-neutral-200"></div>
+              <div class="relative flex justify-between">
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-900 text-white flex items-center justify-center mb-2 z-10"
+                  >
+                    <i class="fa-solid fa-check text-sm"></i>
+                  </div>
+                  <span class="text-xs text-neutral-600">Question Capture</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    2
+                  </div>
+                  <span class="text-xs text-neutral-600">Question Review</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    3
+                  </div>
+                  <span class="text-xs text-neutral-600">Create Project</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    4
+                  </div>
+                  <span class="text-xs text-neutral-600"
+                    >Question Clarification</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    5
+                  </div>
+                  <span class="text-xs text-neutral-600"
+                    >Question Approval</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    6
+                  </div>
+                  <span class="text-xs text-neutral-600">Search</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    7
+                  </div>
+                  <span class="text-xs text-neutral-600">Screening</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    8
+                  </div>
+                  <span class="text-xs text-neutral-600">Extraction</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    9
+                  </div>
+                  <span class="text-xs text-neutral-600">Synthesis</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    10
+                  </div>
+                  <span class="text-xs text-neutral-600">Draft</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    11
+                  </div>
+                  <span class="text-xs text-neutral-600">Internal Review</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    12
+                  </div>
+                  <span class="text-xs text-neutral-600">Final Draft</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    13
+                  </div>
+                  <span class="text-xs text-neutral-600">Export</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    14
+                  </div>
+                  <span class="text-xs text-neutral-600">Follow Up</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- User Selection -->
+            <div class="mb-8">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg">Select Existing User</h3>
+                <button class="text-sm text-neutral-600 hover:text-neutral-900">
+                  <i class="fa-solid fa-plus mr-2"></i>Add New User
+                </button>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div class="flex-1">
+                  <select
+                    class="w-full px-4 py-2.5 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-neutral-300 focus:outline-none"
+                  >
+                    <option value="">Select a user...</option>
+                    <option value="1">Peter Claver - Research Lead</option>
+                    <option value="2">Ambrose Alanda - Policy Maker</option>
+                    <option value="3">
+                      Mary Vanessa - Healthcare Researcher
+                    </option>
+                  </select>
+                </div>
+                <button
+                  class="px-6 py-2.5 bg-neutral-800 text-white rounded-lg hover:bg-neutral-700 transition-colors"
+                >
+                  Load Details
+                </button>
+              </div>
+            </div>
+
+            <!-- Forms Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
               <!-- Form 4.1 -->
-              <div class="bg-white rounded-lg border border-neutral-200 p-6">
-                <h3 class="text-xl mb-6">Form 4.1 - User Details</h3>
+              <div class="bg-neutral-50 rounded-lg p-6">
+                <h3 class="text-lg mb-6">Form 4.1 - User Details</h3>
 
                 <form class="space-y-6">
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -734,8 +910,8 @@
               </div>
 
               <!-- Form 4.2 -->
-              <div class="bg-white rounded-lg border border-neutral-200 p-6">
-                <h3 class="text-xl mb-6">Form 4.2 - Initial Question</h3>
+              <div class="bg-neutral-50 rounded-lg p-6">
+                <h3 class="text-lg mb-6">Form 4.2 - Initial Question</h3>
 
                 <form class="space-y-6">
                   <div class="space-y-4">
@@ -789,31 +965,29 @@
               </div>
             </div>
 
-            <!-- Form Controls - Moved Outside -->
-            <div class="bg-white rounded-lg border border-neutral-200 p-6">
-              <div class="flex justify-between">
+            <!-- Form Controls -->
+            <div
+              class="flex items-center justify-between pt-6 border-t border-neutral-200"
+            >
+              <button
+                class="px-6 py-2.5 border border-neutral-300 rounded-lg hover:bg-neutral-50 transition-colors"
+              >
+                Save Draft
+              </button>
+              <div class="flex items-center space-x-4">
                 <button
-                  type="button"
-                  class="px-6 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
+                  class="px-6 py-2.5 border border-neutral-300 rounded-lg hover:bg-neutral-50 transition-colors"
                 >
-                  Save Draft
+                  Back
                 </button>
-                <div class="space-x-4">
+
+                <a href="qn-review.html">
                   <button
-                    type="button"
-                    class="px-6 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
+                    class="px-8 py-2.5 bg-neutral-900 text-white rounded-lg hover:bg-neutral-800 transition-colors"
                   >
-                    Back
+                    Submit Both Forms
                   </button>
-                  <a href="qn-review.html">
-                    <button
-                      type="submit"
-                      class="px-6 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
-                    >
-                      Submit Both Forms
-                    </button>
-                  </a>
-                </div>
+                </a>
               </div>
             </div>
           </div>
