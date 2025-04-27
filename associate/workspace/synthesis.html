@@ -579,161 +579,396 @@
 
   <body class="h-full text-base-content">
     <div id="app" class="min-h-screen bg-neutral-50 flex">
-      <!-- Project Workspace Content -->
-      <div id="workspace-content" class="pt-[72px] px-6 py-8 w-full">
+      <!-- Project Steps Sidebar -->
+      <div
+        class="fixed left-0 top-[0px] h-full w-[240px] bg-white border-r border-neutral-200 overflow-y-auto"
+      >
+        <!-- Main App Sidebar -->
+        <div class="p-4 border-b border-neutral-200">
+          <div class="flex items-center justify-between">
+            <span class="text-sm">Main Navigation</span>
+            <button class="text-neutral-500 hover:text-neutral-700">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+          </div>
+          <div class="mt-2 space-y-1 opacity-50">
+            <a href="../dashboard.html">
+              <div class="flex items-center space-x-3 p-2 rounded-md">
+                <i class="fa-solid fa-home"></i>
+                <span>Dashboard</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project Steps -->
+        <div class="p-4">
+          <div class="text-sm mb-4">Project Steps</div>
+          <div class="space-y-1">
+            <!-- All 14 Steps with Links -->
+            <a
+              href="qn-capture.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-1"></i>
+              <span>Question Capture</span>
+            </a>
+
+            <a
+              href="qn-review.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-2"></i>
+              <span>Question Review</span>
+            </a>
+
+            <a
+              href="create-project.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-3"></i>
+              <span>Create Project</span>
+            </a>
+
+            <a
+              href="qn-clarification.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-4"></i>
+              <span>Question Clarification</span>
+            </a>
+
+            <a
+              href="qn-approval.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-5"></i>
+              <span>Question Approval</span>
+            </a>
+
+            <a
+              href="search.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-6"></i>
+              <span>Search</span>
+            </a>
+
+            <a
+              href="screening.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-7"></i>
+              <span>Screening</span>
+            </a>
+
+            <a
+              href="extraction.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-8"></i>
+              <span>Extraction</span>
+            </a>
+
+            <a
+              href="synthesis.html"
+              class="flex items-center space-x-3 p-2 rounded-md bg-neutral-100 hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-9"></i>
+              <span>Synthesis</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div id="workspace-content" class="ml-[240px] pt-[0px] px-6 py-8 w-full">
         <div class="max-w-7xl mx-auto">
-          <!-- Progress Tracker -->
-          <div class="mb-8">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center">
-                <span
-                  class="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-900 text-white"
-                  >9</span
-                >
-                <div class="ml-3">
-                  <h2 class="text-lg text-neutral-900">Synthesis</h2>
-                  <p class="text-sm text-neutral-600">Step 9 of 12</p>
+          <!-- Progress Bar Section -->
+          <div class="mb-8 bg-white rounded-lg border border-neutral-200 p-6">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center space-x-4">
+                <div class="flex items-center">
+                  <span
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-900 text-white text-lg"
+                    >9</span
+                  >
+                  <div class="ml-4">
+                    <h2 class="text-xl">Synthesis</h2>
+                  </div>
                 </div>
               </div>
-              <div class="flex space-x-2">
+              <div class="flex items-center space-x-3">
                 <span
                   class="px-3 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
-                  >In Progress</span
+                  >Draft</span
                 >
+                <button class="p-2 hover:bg-neutral-100 rounded-full">
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
               </div>
             </div>
 
-            <!-- Progress Bar -->
-            <div class="mt-4 h-2 bg-neutral-200 rounded-full">
-              <div
-                class="h-2 bg-neutral-900 rounded-full"
-                style="width: 58.33%"
-              ></div>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <!-- Left Column - Text Inputs -->
-            <div class="space-y-6">
-              <!-- Narrative Summary -->
-              <div class="bg-white rounded-lg border border-neutral-200 p-6">
-                <label class="block text-sm text-neutral-700 mb-4"
-                  >Narrative Summary</label
-                >
-                <textarea
-                  rows="6"
-                  class="w-full p-3 border border-neutral-300 rounded-md"
-                  placeholder="Enter your narrative summary..."
-                ></textarea>
-              </div>
-
-              <!-- Key Insights -->
-              <div class="bg-white rounded-lg border border-neutral-200 p-6">
-                <label class="block text-sm text-neutral-700 mb-4"
-                  >Key Insights</label
-                >
-                <div class="space-y-3">
-                  <div class="flex items-center space-x-2">
-                    <i class="fa-solid fa-circle-plus text-neutral-600"></i>
-                    <input
-                      type="text"
-                      class="flex-1 p-2 border border-neutral-300 rounded-md"
-                      placeholder="Add key insight"
-                    />
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fa-solid fa-circle-minus text-neutral-600"></i>
-                    <input
-                      type="text"
-                      class="flex-1 p-2 border border-neutral-300 rounded-md"
-                      value="First identified pattern in the research"
-                    />
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fa-solid fa-circle-minus text-neutral-600"></i>
-                    <input
-                      type="text"
-                      class="flex-1 p-2 border border-neutral-300 rounded-md"
-                      value="Secondary observation from analysis"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <!-- Evidence Gaps -->
-              <div class="bg-white rounded-lg border border-neutral-200 p-6">
-                <label class="block text-sm text-neutral-700 mb-4"
-                  >Evidence Gaps Identified</label
-                >
-                <textarea
-                  rows="4"
-                  class="w-full p-3 border border-neutral-300 rounded-md"
-                  placeholder="Document any gaps in the evidence..."
-                ></textarea>
-              </div>
-            </div>
-
-            <!-- Right Column - Mind Map -->
-            <div class="bg-white rounded-lg border border-neutral-200 p-6">
-              <div class="flex justify-between items-center mb-4">
-                <label class="block text-sm text-neutral-700"
-                  >Mind Map Canvas</label
-                >
-                <div class="flex space-x-2">
-                  <button
-                    class="p-2 border border-neutral-200 rounded-md hover:bg-neutral-50"
+            <!-- New Progress Steps -->
+            <div class="relative mb-8">
+              <div class="absolute top-4 w-full h-0.5 bg-neutral-200"></div>
+              <div class="relative flex justify-between">
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
                   >
-                    <i class="fa-solid fa-download"></i>
-                  </button>
-                  <button
-                    class="p-2 border border-neutral-200 rounded-md hover:bg-neutral-50"
-                  >
-                    <i class="fa-solid fa-upload"></i>
-                  </button>
+                    1
+                  </div>
+                  <span class="text-xs text-neutral-600">Question Capture</span>
                 </div>
-              </div>
 
-              <!-- Mind Map Canvas Area -->
-              <div
-                class="bg-neutral-50 rounded-lg border-2 border-dashed border-neutral-300 h-[600px] flex items-center justify-center"
-              >
-                <div class="text-center space-y-4">
-                  <i
-                    class="fa-solid fa-diagram-project text-4xl text-neutral-400"
-                  ></i>
-                  <p class="text-neutral-600">
-                    Click to start your mind map or upload existing one
-                  </p>
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    2
+                  </div>
+                  <span class="text-xs text-neutral-600">Question Review</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    3
+                  </div>
+                  <span class="text-xs text-neutral-600">Create Project</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    4
+                  </div>
+                  <span class="text-xs text-neutral-600"
+                    >Question Clarification</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    5
+                  </div>
+                  <span class="text-xs text-neutral-600"
+                    >Question Approval</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    6
+                  </div>
+                  <span class="text-xs text-neutral-600">Search</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    7
+                  </div>
+                  <span class="text-xs text-neutral-600">Screening</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    8
+                  </div>
+                  <span class="text-xs text-neutral-600">Extraction</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-900 text-white flex items-center justify-center mb-2 z-10"
+                  >
+                    <i class="fa-solid fa-check text-sm"></i>
+                  </div>
+                  <span class="text-xs text-neutral-600">Synthesis</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    10
+                  </div>
+                  <span class="text-xs text-neutral-600">Draft</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    11
+                  </div>
+                  <span class="text-xs text-neutral-600">Internal Review</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    12
+                  </div>
+                  <span class="text-xs text-neutral-600">Final Draft</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    13
+                  </div>
+                  <span class="text-xs text-neutral-600">Export</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    14
+                  </div>
+                  <span class="text-xs text-neutral-600">Follow Up</span>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Action Buttons -->
-          <div
-            class="flex justify-between mt-8 pt-6 border-t border-neutral-200"
-          >
-            <button
-              type="button"
-              class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <!-- Left Column - Text Inputs -->
+              <div class="space-y-6">
+                <!-- Narrative Summary -->
+                <div class="bg-white rounded-lg border border-neutral-200 p-6">
+                  <label class="block text-sm text-neutral-700 mb-4"
+                    >Narrative Summary</label
+                  >
+                  <textarea
+                    rows="6"
+                    class="w-full p-3 border border-neutral-300 rounded-md"
+                    placeholder="Enter your narrative summary..."
+                  ></textarea>
+                </div>
+
+                <!-- Key Insights -->
+                <div class="bg-white rounded-lg border border-neutral-200 p-6">
+                  <label class="block text-sm text-neutral-700 mb-4"
+                    >Key Insights</label
+                  >
+                  <div class="space-y-3">
+                    <div class="flex items-center space-x-2">
+                      <i class="fa-solid fa-circle-plus text-neutral-600"></i>
+                      <input
+                        type="text"
+                        class="flex-1 p-2 border border-neutral-300 rounded-md"
+                        placeholder="Add key insight"
+                      />
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <i class="fa-solid fa-circle-minus text-neutral-600"></i>
+                      <input
+                        type="text"
+                        class="flex-1 p-2 border border-neutral-300 rounded-md"
+                        value="First identified pattern in the research"
+                      />
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <i class="fa-solid fa-circle-minus text-neutral-600"></i>
+                      <input
+                        type="text"
+                        class="flex-1 p-2 border border-neutral-300 rounded-md"
+                        value="Secondary observation from analysis"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Evidence Gaps -->
+                <div class="bg-white rounded-lg border border-neutral-200 p-6">
+                  <label class="block text-sm text-neutral-700 mb-4"
+                    >Evidence Gaps Identified</label
+                  >
+                  <textarea
+                    rows="4"
+                    class="w-full p-3 border border-neutral-300 rounded-md"
+                    placeholder="Document any gaps in the evidence..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- Right Column - Mind Map -->
+              <div class="bg-white rounded-lg border border-neutral-200 p-6">
+                <div class="flex justify-between items-center mb-4">
+                  <label class="block text-sm text-neutral-700"
+                    >Mind Map Canvas</label
+                  >
+                  <div class="flex space-x-2">
+                    <button
+                      class="p-2 border border-neutral-200 rounded-md hover:bg-neutral-50"
+                    >
+                      <i class="fa-solid fa-download"></i>
+                    </button>
+                    <button
+                      class="p-2 border border-neutral-200 rounded-md hover:bg-neutral-50"
+                    >
+                      <i class="fa-solid fa-upload"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Mind Map Canvas Area -->
+                <div
+                  class="bg-neutral-50 rounded-lg border-2 border-dashed border-neutral-300 h-[600px] flex items-center justify-center"
+                >
+                  <div class="text-center space-y-4">
+                    <i
+                      class="fa-solid fa-diagram-project text-4xl text-neutral-400"
+                    ></i>
+                    <p class="text-neutral-600">
+                      Click to start your mind map or upload existing one
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div
+              class="flex justify-between mt-8 pt-6 border-t border-neutral-200"
             >
-              Back to Extraction
-            </button>
-            <div class="space-x-4">
               <button
                 type="button"
                 class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
               >
-                Save Draft
+                Back to Extraction
               </button>
-              <a href="draft.html">
+              <div class="space-x-4">
                 <button
-                  type="submit"
-                  class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                  type="button"
+                  class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
                 >
-                  Continue to Draft Builder
+                  Save Draft
                 </button>
-              </a>
+                <a href="draft.html">
+                  <button
+                    type="submit"
+                    class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                  >
+                    Continue to Draft Builder
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>

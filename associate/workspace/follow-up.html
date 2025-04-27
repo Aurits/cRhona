@@ -579,191 +579,466 @@
 
   <body class="h-full text-base-content">
     <div id="app" class="min-h-screen bg-neutral-50 flex">
-      <!-- Project Workspace Content -->
-      <div id="workspace-content" class="pt-[72px] px-6 py-8 w-full">
+      <!-- Project Steps Sidebar -->
+      <div
+        class="fixed left-0 top-[0px] h-full w-[240px] bg-white border-r border-neutral-200 overflow-y-auto"
+      >
+        <!-- Main App Sidebar -->
+        <div class="p-4 border-b border-neutral-200">
+          <div class="flex items-center justify-between">
+            <span class="text-sm">Main Navigation</span>
+            <button class="text-neutral-500 hover:text-neutral-700">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+          </div>
+          <div class="mt-2 space-y-1 opacity-50">
+            <a href="../dashboard.html">
+              <div class="flex items-center space-x-3 p-2 rounded-md">
+                <i class="fa-solid fa-home"></i>
+                <span>Dashboard</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project Steps -->
+        <div class="p-4">
+          <div class="text-sm mb-4">Project Steps</div>
+          <div class="space-y-1">
+            <!-- All 14 Steps with Links -->
+            <a
+              href="qn-capture.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-1"></i>
+              <span>Question Capture</span>
+            </a>
+
+            <a
+              href="qn-review.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-2"></i>
+              <span>Question Review</span>
+            </a>
+
+            <a
+              href="create-project.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-3"></i>
+              <span>Create Project</span>
+            </a>
+
+            <a
+              href="qn-clarification.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-4"></i>
+              <span>Question Clarification</span>
+            </a>
+
+            <a
+              href="qn-approval.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-5"></i>
+              <span>Question Approval</span>
+            </a>
+
+            <a
+              href="search.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-6"></i>
+              <span>Search</span>
+            </a>
+
+            <a
+              href="screening.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-7"></i>
+              <span>Screening</span>
+            </a>
+
+            <a
+              href="extraction.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-8"></i>
+              <span>Extraction</span>
+            </a>
+
+            <a
+              href="synthesis.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-9"></i>
+              <span>Synthesis</span>
+            </a>
+
+            <a
+              href="draft.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-10"></i>
+              <span>Draft</span>
+            </a>
+
+            <a
+              href="internal-review.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-11"></i>
+              <span>Internal Review</span>
+            </a>
+
+            <a
+              href="final-draft.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-12"></i>
+              <span>Final Draft</span>
+            </a>
+
+            <a
+              href="export.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-13"></i>
+              <span>Export</span>
+            </a>
+
+            <a
+              href="follow-up.html"
+              class="flex items-center space-x-3 p-2 rounded-md bg-neutral-100 hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-14"></i>
+              <span>Follow Up</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div id="workspace-content" class="ml-[240px] pt-[0px] px-6 py-8 w-full">
         <div class="max-w-7xl mx-auto">
-          <!-- Progress Tracker -->
-          <div class="mb-8">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center">
-                <span
-                  class="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-900 text-white"
-                  >12</span
-                >
-                <div class="ml-3">
-                  <h2 class="text-lg text-neutral-900">
-                    Follow Up & Evaluation
-                  </h2>
-                  <p class="text-sm text-neutral-600">Final Step</p>
+          <!-- Progress Bar Section -->
+          <div class="mb-8 bg-white rounded-lg border border-neutral-200 p-6">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center space-x-4">
+                <div class="flex items-center">
+                  <span
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-900 text-white text-lg"
+                    >14</span
+                  >
+                  <div class="ml-4">
+                    <h2 class="text-xl">Follow Up</h2>
+                  </div>
                 </div>
               </div>
-              <div class="flex space-x-2">
+              <div class="flex items-center space-x-3">
                 <span
                   class="px-3 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
-                  >Forms 7.1 - 7.3</span
+                  >Draft</span
                 >
+                <button class="p-2 hover:bg-neutral-100 rounded-full">
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
               </div>
             </div>
 
-            <!-- Progress Bar -->
-            <div class="mt-4 h-2 bg-neutral-200 rounded-full">
-              <div
-                class="h-2 bg-neutral-900 rounded-full"
-                style="width: 100%"
-              ></div>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-3 gap-6">
-            <!-- Form 7.1: Initial Follow-up -->
-            <div class="bg-white rounded-lg border border-neutral-200 p-6">
-              <h3 class="text-xl mb-6">7.1 Policy Uptake Status</h3>
-
-              <form class="space-y-4">
-                <div>
-                  <label class="block text-sm mb-2"
-                    >Implementation Status</label
+            <!-- New Progress Steps -->
+            <div class="relative mb-8">
+              <div class="absolute top-4 w-full h-0.5 bg-neutral-200"></div>
+              <div class="relative flex justify-between">
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
                   >
-                  <select
-                    class="w-full p-2 border border-neutral-200 rounded-md"
+                    1
+                  </div>
+                  <span class="text-xs text-neutral-600">Question Capture</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
                   >
-                    <option>Under Review</option>
-                    <option>Partially Implemented</option>
-                    <option>Fully Implemented</option>
-                    <option>Not Implemented</option>
-                  </select>
+                    2
+                  </div>
+                  <span class="text-xs text-neutral-600">Question Review</span>
                 </div>
 
-                <div>
-                  <label class="block text-sm mb-2">Initial Feedback</label>
-                  <textarea
-                    class="w-full p-2 border border-neutral-200 rounded-md"
-                    rows="4"
-                    placeholder="Record initial policy maker feedback..."
-                  ></textarea>
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    3
+                  </div>
+                  <span class="text-xs text-neutral-600">Create Project</span>
                 </div>
 
-                <div>
-                  <label class="block text-sm mb-2">Next Review Date</label>
-                  <input
-                    type="date"
-                    class="w-full p-2 border border-neutral-200 rounded-md"
-                  />
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    4
+                  </div>
+                  <span class="text-xs text-neutral-600"
+                    >Question Clarification</span
+                  >
                 </div>
-              </form>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    5
+                  </div>
+                  <span class="text-xs text-neutral-600"
+                    >Question Approval</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    6
+                  </div>
+                  <span class="text-xs text-neutral-600">Search</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    7
+                  </div>
+                  <span class="text-xs text-neutral-600">Screening</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    8
+                  </div>
+                  <span class="text-xs text-neutral-600">Extraction</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    9
+                  </div>
+                  <span class="text-xs text-neutral-600">Synthesis</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    10
+                  </div>
+                  <span class="text-xs text-neutral-600">Draft</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    11
+                  </div>
+                  <span class="text-xs text-neutral-600">Internal Review</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    12
+                  </div>
+                  <span class="text-xs text-neutral-600">Final Draft</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    13
+                  </div>
+                  <span class="text-xs text-neutral-600">Export</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-900 text-white flex items-center justify-center mb-2 z-10"
+                  >
+                    <i class="fa-solid fa-check text-sm"></i>
+                  </div>
+                  <span class="text-xs text-neutral-600">Follow Up</span>
+                </div>
+              </div>
             </div>
 
-            <!-- Form 7.2: Stakeholder Feedback -->
-            <div class="bg-white rounded-lg border border-neutral-200 p-6">
-              <h3 class="text-xl mb-6">7.2 Stakeholder Assessment</h3>
+            <div class="grid grid-cols-3 gap-6">
+              <!-- Form 7.1: Initial Follow-up -->
+              <div class="bg-white rounded-lg border border-neutral-200 p-6">
+                <h3 class="text-xl mb-6">7.1 Policy Uptake Status</h3>
 
-              <form class="space-y-4">
-                <div>
-                  <label class="block text-sm mb-2">Key Stakeholders</label>
-                  <div class="space-y-2">
-                    <div class="flex items-center space-x-2">
-                      <input type="checkbox" class="border-neutral-300" />
-                      <label>Policy Makers</label>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                      <input type="checkbox" class="border-neutral-300" />
-                      <label>Healthcare Providers</label>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                      <input type="checkbox" class="border-neutral-300" />
-                      <label>Community Leaders</label>
+                <form class="space-y-4">
+                  <div>
+                    <label class="block text-sm mb-2"
+                      >Implementation Status</label
+                    >
+                    <select
+                      class="w-full p-2 border border-neutral-200 rounded-md"
+                    >
+                      <option>Under Review</option>
+                      <option>Partially Implemented</option>
+                      <option>Fully Implemented</option>
+                      <option>Not Implemented</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block text-sm mb-2">Initial Feedback</label>
+                    <textarea
+                      class="w-full p-2 border border-neutral-200 rounded-md"
+                      rows="4"
+                      placeholder="Record initial policy maker feedback..."
+                    ></textarea>
+                  </div>
+
+                  <div>
+                    <label class="block text-sm mb-2">Next Review Date</label>
+                    <input
+                      type="date"
+                      class="w-full p-2 border border-neutral-200 rounded-md"
+                    />
+                  </div>
+                </form>
+              </div>
+
+              <!-- Form 7.2: Stakeholder Feedback -->
+              <div class="bg-white rounded-lg border border-neutral-200 p-6">
+                <h3 class="text-xl mb-6">7.2 Stakeholder Assessment</h3>
+
+                <form class="space-y-4">
+                  <div>
+                    <label class="block text-sm mb-2">Key Stakeholders</label>
+                    <div class="space-y-2">
+                      <div class="flex items-center space-x-2">
+                        <input type="checkbox" class="border-neutral-300" />
+                        <label>Policy Makers</label>
+                      </div>
+                      <div class="flex items-center space-x-2">
+                        <input type="checkbox" class="border-neutral-300" />
+                        <label>Healthcare Providers</label>
+                      </div>
+                      <div class="flex items-center space-x-2">
+                        <input type="checkbox" class="border-neutral-300" />
+                        <label>Community Leaders</label>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div>
-                  <label class="block text-sm mb-2">Feedback Summary</label>
-                  <textarea
-                    class="w-full p-2 border border-neutral-200 rounded-md"
-                    rows="4"
-                    placeholder="Summarize stakeholder feedback..."
-                  ></textarea>
-                </div>
-
-                <div>
-                  <label class="block text-sm mb-2">Follow-up Actions</label>
-                  <select
-                    multiple
-                    class="w-full p-2 border border-neutral-200 rounded-md"
-                  >
-                    <option>Schedule Follow-up Meeting</option>
-                    <option>Request Additional Data</option>
-                    <option>Revise Recommendations</option>
-                    <option>Monitor Implementation</option>
-                  </select>
-                </div>
-              </form>
-            </div>
-
-            <!-- Form 7.3: Long-term Outcomes -->
-            <div class="bg-white rounded-lg border border-neutral-200 p-6">
-              <h3 class="text-xl mb-6">7.3 Long-term Impact</h3>
-
-              <form class="space-y-4">
-                <div>
-                  <label class="block text-sm mb-2">Observed Outcomes</label>
-                  <textarea
-                    class="w-full p-2 border border-neutral-200 rounded-md"
-                    rows="4"
-                    placeholder="Document observed long-term outcomes..."
-                  ></textarea>
-                </div>
-
-                <div>
-                  <label class="block text-sm mb-2">Impact Indicators</label>
-                  <div class="space-y-2">
-                    <input
-                      type="text"
+                  <div>
+                    <label class="block text-sm mb-2">Feedback Summary</label>
+                    <textarea
                       class="w-full p-2 border border-neutral-200 rounded-md"
-                      placeholder="Indicator 1"
-                    />
-                    <input
-                      type="text"
+                      rows="4"
+                      placeholder="Summarize stakeholder feedback..."
+                    ></textarea>
+                  </div>
+
+                  <div>
+                    <label class="block text-sm mb-2">Follow-up Actions</label>
+                    <select
+                      multiple
                       class="w-full p-2 border border-neutral-200 rounded-md"
-                      placeholder="Indicator 2"
-                    />
-                    <input
-                      type="text"
+                    >
+                      <option>Schedule Follow-up Meeting</option>
+                      <option>Request Additional Data</option>
+                      <option>Revise Recommendations</option>
+                      <option>Monitor Implementation</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Form 7.3: Long-term Outcomes -->
+              <div class="bg-white rounded-lg border border-neutral-200 p-6">
+                <h3 class="text-xl mb-6">7.3 Long-term Impact</h3>
+
+                <form class="space-y-4">
+                  <div>
+                    <label class="block text-sm mb-2">Observed Outcomes</label>
+                    <textarea
                       class="w-full p-2 border border-neutral-200 rounded-md"
-                      placeholder="Indicator 3"
+                      rows="4"
+                      placeholder="Document observed long-term outcomes..."
+                    ></textarea>
+                  </div>
+
+                  <div>
+                    <label class="block text-sm mb-2">Impact Indicators</label>
+                    <div class="space-y-2">
+                      <input
+                        type="text"
+                        class="w-full p-2 border border-neutral-200 rounded-md"
+                        placeholder="Indicator 1"
+                      />
+                      <input
+                        type="text"
+                        class="w-full p-2 border border-neutral-200 rounded-md"
+                        placeholder="Indicator 2"
+                      />
+                      <input
+                        type="text"
+                        class="w-full p-2 border border-neutral-200 rounded-md"
+                        placeholder="Indicator 3"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="block text-sm mb-2"
+                      >Schedule Next Review</label
+                    >
+                    <input
+                      type="date"
+                      class="w-full p-2 border border-neutral-200 rounded-md"
                     />
                   </div>
-                </div>
-
-                <div>
-                  <label class="block text-sm mb-2">Schedule Next Review</label>
-                  <input
-                    type="date"
-                    class="w-full p-2 border border-neutral-200 rounded-md"
-                  />
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
-          </div>
 
-          <!-- Action Buttons -->
-          <div
-            class="flex justify-between mt-8 pt-6 border-t border-neutral-200"
-          >
-            <button
-              type="button"
-              class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
+            <!-- Action Buttons -->
+            <div
+              class="flex justify-between mt-8 pt-6 border-t border-neutral-200"
             >
-              Back to Export
-            </button>
-            <a href="../workspace.html">
               <button
                 type="button"
-                class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
               >
-                Complete Project
+                Back to Export
               </button>
-            </a>
+              <a href="../workspace.html">
+                <button
+                  type="button"
+                  class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                >
+                  Complete Project
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>

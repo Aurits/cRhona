@@ -579,207 +579,400 @@
 
   <body class="h-full text-base-content">
     <div id="app" class="min-h-screen bg-neutral-50 flex">
-      <!-- Project Workspace Content -->
-      <div id="workspace-content" class="pt-[72px] px-6 py-8 w-full">
+      <!-- Project Steps Sidebar -->
+      <div
+        class="fixed left-0 top-[0px] h-full w-[240px] bg-white border-r border-neutral-200 overflow-y-auto"
+      >
+        <!-- Main App Sidebar -->
+        <div class="p-4 border-b border-neutral-200">
+          <div class="flex items-center justify-between">
+            <span class="text-sm">Main Navigation</span>
+            <button class="text-neutral-500 hover:text-neutral-700">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+          </div>
+          <div class="mt-2 space-y-1 opacity-50">
+            <a href="../dashboard.html">
+              <div class="flex items-center space-x-3 p-2 rounded-md">
+                <i class="fa-solid fa-home"></i>
+                <span>Dashboard</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project Steps -->
+        <div class="p-4">
+          <div class="text-sm mb-4">Project Steps</div>
+          <div class="space-y-1">
+            <!-- All 14 Steps with Links -->
+            <a
+              href="qn-capture.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-1"></i>
+              <span>Question Capture</span>
+            </a>
+
+            <a
+              href="qn-review.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-2"></i>
+              <span>Question Review</span>
+            </a>
+
+            <a
+              href="create-project.html"
+              class="flex items-center space-x-3 p-2 rounded-md bg-neutral-100 hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-3"></i>
+              <span>Create Project</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div id="workspace-content" class="ml-[240px] pt-[0px] px-6 py-8 w-full">
         <div class="max-w-7xl mx-auto">
-          <!-- Progress Tracker -->
-          <div class="mb-8">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center">
-                <span
-                  class="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-900 text-white"
-                  >3</span
-                >
-                <div class="ml-3">
-                  <h2 class="text-lg text-neutral-900">Project Creation</h2>
-                  <p class="text-sm text-neutral-600">Step 3 of 12</p>
+          <!-- Progress Bar Section -->
+          <div class="mb-8 bg-white rounded-lg border border-neutral-200 p-6">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center space-x-4">
+                <div class="flex items-center">
+                  <span
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-900 text-white text-lg"
+                    >3</span
+                  >
+                  <div class="ml-4">
+                    <h2 class="text-xl">Create Project</h2>
+                  </div>
                 </div>
               </div>
-              <div class="flex space-x-2">
+              <div class="flex items-center space-x-3">
                 <span
                   class="px-3 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
-                  >New Project</span
+                  >Draft</span
                 >
+                <button class="p-2 hover:bg-neutral-100 rounded-full">
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
               </div>
             </div>
 
-            <div class="mt-4 h-2 bg-neutral-200 rounded-full">
-              <div
-                class="h-2 bg-neutral-900 rounded-full"
-                style="width: 16.6%"
-              ></div>
-            </div>
-          </div>
-
-          <!-- Project Creation Form -->
-          <div class="bg-white rounded-lg border border-neutral-200 p-6">
-            <form
-              class="space-y-6"
-              onsubmit="event.preventDefault(); window.location.href='qn-clarification.html';"
-            >
-              <div class="grid grid-cols-2 gap-6">
-                <!-- Left Column -->
-                <div class="space-y-6">
-                  <div>
-                    <label class="block text-sm text-neutral-700 mb-2"
-                      >Project Title</label
-                    >
-                    <input
-                      type="text"
-                      class="w-full px-4 py-2 border border-neutral-300 rounded-md"
-                      placeholder="Enter project title"
-                    />
+            <!-- New Progress Steps -->
+            <div class="relative mb-8">
+              <div class="absolute top-4 w-full h-0.5 bg-neutral-200"></div>
+              <div class="relative flex justify-between">
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    1
                   </div>
+                  <span class="text-xs text-neutral-600">Question Capture</span>
+                </div>
 
-                  <div>
-                    <label class="block text-sm text-neutral-700 mb-2"
-                      >Project Code</label
-                    >
-                    <div class="flex space-x-2">
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    2
+                  </div>
+                  <span class="text-xs text-neutral-600">Question Review</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-900 text-white flex items-center justify-center mb-2 z-10"
+                  >
+                    <i class="fa-solid fa-check text-sm"></i>
+                  </div>
+                  <span class="text-xs text-neutral-600">Create Project</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    4
+                  </div>
+                  <span class="text-xs text-neutral-600"
+                    >Question Clarification</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    5
+                  </div>
+                  <span class="text-xs text-neutral-600"
+                    >Question Approval</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    6
+                  </div>
+                  <span class="text-xs text-neutral-600">Search</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    7
+                  </div>
+                  <span class="text-xs text-neutral-600">Screening</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    8
+                  </div>
+                  <span class="text-xs text-neutral-600">Extraction</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    9
+                  </div>
+                  <span class="text-xs text-neutral-600">Synthesis</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    10
+                  </div>
+                  <span class="text-xs text-neutral-600">Draft</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    11
+                  </div>
+                  <span class="text-xs text-neutral-600">Internal Review</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    12
+                  </div>
+                  <span class="text-xs text-neutral-600">Final Draft</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    13
+                  </div>
+                  <span class="text-xs text-neutral-600">Export</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    14
+                  </div>
+                  <span class="text-xs text-neutral-600">Follow Up</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Creation Form -->
+            <div class="bg-white rounded-lg border border-neutral-200 p-6">
+              <form
+                class="space-y-6"
+                onsubmit="event.preventDefault(); window.location.href='qn-clarification.html';"
+              >
+                <div class="grid grid-cols-2 gap-6">
+                  <!-- Left Column -->
+                  <div class="space-y-6">
+                    <div>
+                      <label class="block text-sm text-neutral-700 mb-2"
+                        >Project Title</label
+                      >
                       <input
                         type="text"
-                        class="flex-1 px-4 py-2 border border-neutral-300 rounded-md bg-neutral-50"
-                        value="PRJ-2025-001"
-                        readonly
+                        class="w-full px-4 py-2 border border-neutral-300 rounded-md"
+                        placeholder="Enter project title"
                       />
+                    </div>
+
+                    <div>
+                      <label class="block text-sm text-neutral-700 mb-2"
+                        >Project Code</label
+                      >
+                      <div class="flex space-x-2">
+                        <input
+                          type="text"
+                          class="flex-1 px-4 py-2 border border-neutral-300 rounded-md bg-neutral-50"
+                          value="PRJ-2025-001"
+                          readonly
+                        />
+                        <button
+                          type="button"
+                          class="px-4 py-2 border border-neutral-300 rounded-md"
+                        >
+                          <i class="fa-solid fa-arrows-rotate"></i>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label class="block text-sm text-neutral-700 mb-2"
+                        >Domain/Topic Area</label
+                      >
+                      <select
+                        class="w-full px-4 py-2 border border-neutral-300 rounded-md"
+                      >
+                        <option>Healthcare Policy</option>
+                        <option>Public Health</option>
+                        <option>Clinical Research</option>
+                        <option>Health Systems</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label class="block text-sm text-neutral-700 mb-2"
+                        >Summary Description</label
+                      >
+                      <textarea
+                        rows="4"
+                        class="w-full px-4 py-2 border border-neutral-300 rounded-md"
+                        placeholder="Enter project summary..."
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <!-- Right Column -->
+                  <div class="space-y-6">
+                    <div>
+                      <label class="block text-sm text-neutral-700 mb-2"
+                        >Internal Reviewer</label
+                      >
+                      <div
+                        class="flex items-center space-x-2 p-3 border border-neutral-300 rounded-md"
+                      >
+                        <img
+                          src="https://api.dicebear.com/7.x/notionists/svg?seed=1"
+                          alt="Reviewer"
+                          class="w-8 h-8 rounded-full"
+                        />
+                        <span>Mary Vanessa</span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label class="block text-sm text-neutral-700 mb-2"
+                        >Contributors</label
+                      >
+                      <div class="space-y-2">
+                        <div
+                          class="flex items-center space-x-2 p-3 border border-neutral-300 rounded-md"
+                        >
+                          <img
+                            src="https://api.dicebear.com/7.x/notionists/svg?seed=2"
+                            alt="Contributor"
+                            class="w-8 h-8 rounded-full"
+                          />
+                          <span>Peter Claver</span>
+                        </div>
+                        <div
+                          class="flex items-center space-x-2 p-3 border border-neutral-300 rounded-md"
+                        >
+                          <img
+                            src="https://api.dicebear.com/7.x/notionists/svg?seed=3"
+                            alt="Contributor"
+                            class="w-8 h-8 rounded-full"
+                          />
+                          <span>Ambrose Alanda</span>
+                        </div>
+                      </div>
                       <button
                         type="button"
-                        class="px-4 py-2 border border-neutral-300 rounded-md"
+                        class="mt-2 text-sm text-neutral-600 hover:text-neutral-900"
                       >
-                        <i class="fa-solid fa-arrows-rotate"></i>
+                        <i class="fa-solid fa-plus mr-1"></i> Add Contributor
                       </button>
                     </div>
-                  </div>
 
-                  <div>
-                    <label class="block text-sm text-neutral-700 mb-2"
-                      >Domain/Topic Area</label
-                    >
-                    <select
-                      class="w-full px-4 py-2 border border-neutral-300 rounded-md"
-                    >
-                      <option>Healthcare Policy</option>
-                      <option>Public Health</option>
-                      <option>Clinical Research</option>
-                      <option>Health Systems</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label class="block text-sm text-neutral-700 mb-2"
-                      >Summary Description</label
-                    >
-                    <textarea
-                      rows="4"
-                      class="w-full px-4 py-2 border border-neutral-300 rounded-md"
-                      placeholder="Enter project summary..."
-                    ></textarea>
+                    <div>
+                      <label class="block text-sm text-neutral-700 mb-2"
+                        >Workflow Steps Assignment</label
+                      >
+                      <div
+                        class="space-y-2 border border-neutral-300 rounded-md p-4"
+                      >
+                        <label class="flex items-center">
+                          <input
+                            type="checkbox"
+                            class="mr-2"
+                            checked
+                            disabled
+                          />
+                          <span class="text-neutral-500"
+                            >Steps 1-2 (Completed)</span
+                          >
+                        </label>
+                        <label class="flex items-center">
+                          <input type="checkbox" class="mr-2" />
+                          <span>Step 3: Question Clarification</span>
+                        </label>
+                        <label class="flex items-center">
+                          <input type="checkbox" class="mr-2" />
+                          <span>Step 4-6: Research & Analysis</span>
+                        </label>
+                        <label class="flex items-center">
+                          <input type="checkbox" class="mr-2" />
+                          <span>Step 7-9: Synthesis & Review</span>
+                        </label>
+                        <label class="flex items-center">
+                          <input type="checkbox" class="mr-2" />
+                          <span>Step 10-12: Finalization</span>
+                        </label>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <!-- Right Column -->
-                <div class="space-y-6">
-                  <div>
-                    <label class="block text-sm text-neutral-700 mb-2"
-                      >Internal Reviewer</label
-                    >
-                    <div
-                      class="flex items-center space-x-2 p-3 border border-neutral-300 rounded-md"
-                    >
-                      <img
-                        src="https://api.dicebear.com/7.x/notionists/svg?seed=1"
-                        alt="Reviewer"
-                        class="w-8 h-8 rounded-full"
-                      />
-                      <span>Mary Vanessa</span>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label class="block text-sm text-neutral-700 mb-2"
-                      >Contributors</label
-                    >
-                    <div class="space-y-2">
-                      <div
-                        class="flex items-center space-x-2 p-3 border border-neutral-300 rounded-md"
-                      >
-                        <img
-                          src="https://api.dicebear.com/7.x/notionists/svg?seed=2"
-                          alt="Contributor"
-                          class="w-8 h-8 rounded-full"
-                        />
-                        <span>Peter Claver</span>
-                      </div>
-                      <div
-                        class="flex items-center space-x-2 p-3 border border-neutral-300 rounded-md"
-                      >
-                        <img
-                          src="https://api.dicebear.com/7.x/notionists/svg?seed=3"
-                          alt="Contributor"
-                          class="w-8 h-8 rounded-full"
-                        />
-                        <span>Ambrose Alanda</span>
-                      </div>
-                    </div>
-                    <button
-                      type="button"
-                      class="mt-2 text-sm text-neutral-600 hover:text-neutral-900"
-                    >
-                      <i class="fa-solid fa-plus mr-1"></i> Add Contributor
-                    </button>
-                  </div>
-
-                  <div>
-                    <label class="block text-sm text-neutral-700 mb-2"
-                      >Workflow Steps Assignment</label
-                    >
-                    <div
-                      class="space-y-2 border border-neutral-300 rounded-md p-4"
-                    >
-                      <label class="flex items-center">
-                        <input type="checkbox" class="mr-2" checked disabled />
-                        <span class="text-neutral-500"
-                          >Steps 1-2 (Completed)</span
-                        >
-                      </label>
-                      <label class="flex items-center">
-                        <input type="checkbox" class="mr-2" />
-                        <span>Step 3: Question Clarification</span>
-                      </label>
-                      <label class="flex items-center">
-                        <input type="checkbox" class="mr-2" />
-                        <span>Step 4-6: Research & Analysis</span>
-                      </label>
-                      <label class="flex items-center">
-                        <input type="checkbox" class="mr-2" />
-                        <span>Step 7-9: Synthesis & Review</span>
-                      </label>
-                      <label class="flex items-center">
-                        <input type="checkbox" class="mr-2" />
-                        <span>Step 10-12: Finalization</span>
-                      </label>
-                    </div>
-                  </div>
+                <div
+                  class="flex justify-end space-x-4 pt-6 border-t border-neutral-200"
+                >
+                  <button
+                    type="button"
+                    class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                  >
+                    Create Project
+                  </button>
                 </div>
-              </div>
-
-              <div
-                class="flex justify-end space-x-4 pt-6 border-t border-neutral-200"
-              >
-                <button
-                  type="button"
-                  class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
-                >
-                  Create Project
-                </button>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>

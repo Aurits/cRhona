@@ -579,202 +579,455 @@
 
   <body class="h-full text-base-content">
     <div id="app" class="min-h-screen bg-neutral-50 flex">
-      <!-- Project Workspace Content -->
-      <div id="workspace-content" class="pt-[72px] px-6 py-8 w-full">
+      <!-- Project Steps Sidebar -->
+      <div
+        class="fixed left-0 top-[0px] h-full w-[240px] bg-white border-r border-neutral-200 overflow-y-auto"
+      >
+        <!-- Main App Sidebar -->
+        <div class="p-4 border-b border-neutral-200">
+          <div class="flex items-center justify-between">
+            <span class="text-sm">Main Navigation</span>
+            <button class="text-neutral-500 hover:text-neutral-700">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+          </div>
+          <div class="mt-2 space-y-1 opacity-50">
+            <a href="../dashboard.html">
+              <div class="flex items-center space-x-3 p-2 rounded-md">
+                <i class="fa-solid fa-home"></i>
+                <span>Dashboard</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project Steps -->
+        <div class="p-4">
+          <div class="text-sm mb-4">Project Steps</div>
+          <div class="space-y-1">
+            <!-- All 14 Steps with Links -->
+            <a
+              href="qn-capture.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-1"></i>
+              <span>Question Capture</span>
+            </a>
+
+            <a
+              href="qn-review.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-2"></i>
+              <span>Question Review</span>
+            </a>
+
+            <a
+              href="create-project.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-3"></i>
+              <span>Create Project</span>
+            </a>
+
+            <a
+              href="qn-clarification.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-4"></i>
+              <span>Question Clarification</span>
+            </a>
+
+            <a
+              href="qn-approval.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-5"></i>
+              <span>Question Approval</span>
+            </a>
+
+            <a
+              href="search.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-6"></i>
+              <span>Search</span>
+            </a>
+
+            <a
+              href="screening.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-7"></i>
+              <span>Screening</span>
+            </a>
+
+            <a
+              href="extraction.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-8"></i>
+              <span>Extraction</span>
+            </a>
+
+            <a
+              href="synthesis.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-9"></i>
+              <span>Synthesis</span>
+            </a>
+
+            <a
+              href="draft.html"
+              class="flex items-center space-x-3 p-2 rounded-md hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-10"></i>
+              <span>Draft</span>
+            </a>
+
+            <a
+              href="internal-review.html"
+              class="flex items-center space-x-3 p-2 rounded-md bg-neutral-100 hover:bg-neutral-50"
+            >
+              <i class="fa-solid fa-11"></i>
+              <span>Internal Review</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div id="workspace-content" class="ml-[240px] pt-[0px] px-6 py-8 w-full">
         <div class="max-w-7xl mx-auto">
-          <!-- Progress Tracker -->
-          <div class="mb-8">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center">
-                <span
-                  class="w-8 h-8 flex items-center justify-center rounded-full bg-neutral-900 text-white"
-                  >11</span
-                >
-                <div class="ml-3">
-                  <h2 class="text-lg text-neutral-900">Review</h2>
-                  <p class="text-sm text-neutral-600">Step 11 of 12</p>
+          <!-- Progress Bar Section -->
+          <div class="mb-8 bg-white rounded-lg border border-neutral-200 p-6">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center space-x-4">
+                <div class="flex items-center">
+                  <span
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-900 text-white text-lg"
+                    >11</span
+                  >
+                  <div class="ml-4">
+                    <h2 class="text-xl">Review</h2>
+                  </div>
                 </div>
               </div>
-              <div class="flex space-x-2">
+              <div class="flex items-center space-x-3">
                 <span
                   class="px-3 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full"
-                  >Under Review</span
+                  >Draft</span
                 >
+                <button class="p-2 hover:bg-neutral-100 rounded-full">
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
               </div>
             </div>
 
-            <!-- Progress Bar -->
-            <div class="mt-4 h-2 bg-neutral-200 rounded-full">
-              <div
-                class="h-2 bg-neutral-900 rounded-full"
-                style="width: 75%"
-              ></div>
-            </div>
-          </div>
-
-          <!-- Review Sections -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <!-- Internal Review -->
-            <div class="space-y-6">
-              <div class="bg-white rounded-lg border border-neutral-200 p-6">
-                <h3 class="text-lg mb-4">Internal Review</h3>
-
-                <!-- Review Checklist -->
-                <div class="space-y-4">
-                  <div class="flex items-start space-x-3">
-                    <input type="checkbox" class="mt-1" />
-                    <div>
-                      <label class="block text-sm"
-                        >Research Question Alignment</label
-                      >
-                      <textarea
-                        class="mt-2 w-full p-3 border border-neutral-200 rounded-md"
-                        rows="2"
-                        placeholder="Add comments..."
-                      ></textarea>
-                    </div>
-                  </div>
-
-                  <div class="flex items-start space-x-3">
-                    <input type="checkbox" class="mt-1" />
-                    <div>
-                      <label class="block text-sm"
-                        >Methodology Assessment</label
-                      >
-                      <textarea
-                        class="mt-2 w-full p-3 border border-neutral-200 rounded-md"
-                        rows="2"
-                        placeholder="Add comments..."
-                      ></textarea>
-                    </div>
-                  </div>
-
-                  <div class="flex items-start space-x-3">
-                    <input type="checkbox" class="mt-1" />
-                    <div>
-                      <label class="block text-sm">Evidence Quality</label>
-                      <textarea
-                        class="mt-2 w-full p-3 border border-neutral-200 rounded-md"
-                        rows="2"
-                        placeholder="Add comments..."
-                      ></textarea>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Overall Assessment -->
-                <div class="mt-6">
-                  <label class="block text-sm mb-2">Overall Assessment</label>
-                  <select
-                    class="w-full p-2 border border-neutral-200 rounded-md"
+            <!-- New Progress Steps -->
+            <div class="relative mb-8">
+              <div class="absolute top-4 w-full h-0.5 bg-neutral-200"></div>
+              <div class="relative flex justify-between">
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
                   >
-                    <option>Select Assessment</option>
-                    <option>Approve</option>
-                    <option>Minor Revision</option>
-                    <option>Major Revision</option>
-                    <option>Reject</option>
-                  </select>
+                    <i class="fa-solid fa-check text-sm"></i>
+                  </div>
+                  <span class="text-xs text-neutral-600">Question Capture</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    2
+                  </div>
+                  <span class="text-xs text-neutral-600">Question Review</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    3
+                  </div>
+                  <span class="text-xs text-neutral-600">Create Project</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    4
+                  </div>
+                  <span class="text-xs text-neutral-600"
+                    >Question Clarification</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    5
+                  </div>
+                  <span class="text-xs text-neutral-600"
+                    >Question Approval</span
+                  >
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    6
+                  </div>
+                  <span class="text-xs text-neutral-600">Search</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    7
+                  </div>
+                  <span class="text-xs text-neutral-600">Screening</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    8
+                  </div>
+                  <span class="text-xs text-neutral-600">Extraction</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    9
+                  </div>
+                  <span class="text-xs text-neutral-600">Synthesis</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    10
+                  </div>
+                  <span class="text-xs text-neutral-600">Draft</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-900 text-white flex items-center justify-center mb-2 z-10"
+                  >
+                    11
+                  </div>
+                  <span class="text-xs text-neutral-600">Internal Review</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    12
+                  </div>
+                  <span class="text-xs text-neutral-600">Final Draft</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    13
+                  </div>
+                  <span class="text-xs text-neutral-600">Export</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center mb-2 z-10"
+                  >
+                    14
+                  </div>
+                  <span class="text-xs text-neutral-600">Follow Up</span>
                 </div>
               </div>
             </div>
 
-            <!-- External Review -->
-            <div class="space-y-6">
-              <div class="bg-white rounded-lg border border-neutral-200 p-6">
-                <h3 class="text-lg mb-4">External Review</h3>
+            <!-- Review Sections -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <!-- Internal Review -->
+              <div class="space-y-6">
+                <div class="bg-white rounded-lg border border-neutral-200 p-6">
+                  <h3 class="text-lg mb-4">Internal Review</h3>
 
-                <!-- Reviewer Details -->
-                <div class="flex items-center space-x-3 mb-6">
-                  <img
-                    src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=345"
-                    class="w-10 h-10 rounded-full"
-                  />
-                  <div>
-                    <p>Dr. Mary Vanessa</p>
-                    <p class="text-sm text-neutral-600">External Reviewer</p>
-                  </div>
-                </div>
+                  <!-- Review Checklist -->
+                  <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                      <input type="checkbox" class="mt-1" />
+                      <div>
+                        <label class="block text-sm"
+                          >Research Question Alignment</label
+                        >
+                        <textarea
+                          class="mt-2 w-full p-3 border border-neutral-200 rounded-md"
+                          rows="2"
+                          placeholder="Add comments..."
+                        ></textarea>
+                      </div>
+                    </div>
 
-                <!-- Email Invitation -->
-                <div class="bg-neutral-50 p-4 rounded-lg mb-6">
-                  <div class="flex items-center justify-between mb-4">
-                    <span class="text-sm">Review Invitation</span>
-                    <span class="text-sm text-neutral-600"
-                      >Sent on April 15, 2025</span
-                    >
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fa-regular fa-envelope text-neutral-600"></i>
-                    <span class="text-sm">maryvanessa@example.com</span>
-                  </div>
-                </div>
+                    <div class="flex items-start space-x-3">
+                      <input type="checkbox" class="mt-1" />
+                      <div>
+                        <label class="block text-sm"
+                          >Methodology Assessment</label
+                        >
+                        <textarea
+                          class="mt-2 w-full p-3 border border-neutral-200 rounded-md"
+                          rows="2"
+                          placeholder="Add comments..."
+                        ></textarea>
+                      </div>
+                    </div>
 
-                <!-- Review Form -->
-                <div class="space-y-4">
-                  <div>
-                    <label class="block text-sm mb-2">Clarity Assessment</label>
-                    <div class="flex items-center space-x-4">
-                      <label class="flex items-center"
-                        ><input type="radio" name="clarity" class="mr-2" />
-                        1</label
-                      >
-                      <label class="flex items-center"
-                        ><input type="radio" name="clarity" class="mr-2" />
-                        2</label
-                      >
-                      <label class="flex items-center"
-                        ><input type="radio" name="clarity" class="mr-2" />
-                        3</label
-                      >
-                      <label class="flex items-center"
-                        ><input type="radio" name="clarity" class="mr-2" />
-                        4</label
-                      >
-                      <label class="flex items-center"
-                        ><input type="radio" name="clarity" class="mr-2" />
-                        5</label
-                      >
+                    <div class="flex items-start space-x-3">
+                      <input type="checkbox" class="mt-1" />
+                      <div>
+                        <label class="block text-sm">Evidence Quality</label>
+                        <textarea
+                          class="mt-2 w-full p-3 border border-neutral-200 rounded-md"
+                          rows="2"
+                          placeholder="Add comments..."
+                        ></textarea>
+                      </div>
                     </div>
                   </div>
 
-                  <div>
-                    <label class="block text-sm mb-2">Comments</label>
-                    <textarea
-                      class="w-full p-3 border border-neutral-200 rounded-md"
-                      rows="4"
-                      placeholder="Add review comments..."
-                    ></textarea>
+                  <!-- Overall Assessment -->
+                  <div class="mt-6">
+                    <label class="block text-sm mb-2">Overall Assessment</label>
+                    <select
+                      class="w-full p-2 border border-neutral-200 rounded-md"
+                    >
+                      <option>Select Assessment</option>
+                      <option>Approve</option>
+                      <option>Minor Revision</option>
+                      <option>Major Revision</option>
+                      <option>Reject</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- External Review -->
+              <div class="space-y-6">
+                <div class="bg-white rounded-lg border border-neutral-200 p-6">
+                  <h3 class="text-lg mb-4">External Review</h3>
+
+                  <!-- Reviewer Details -->
+                  <div class="flex items-center space-x-3 mb-6">
+                    <img
+                      src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=345"
+                      class="w-10 h-10 rounded-full"
+                    />
+                    <div>
+                      <p>Dr. Mary Vanessa</p>
+                      <p class="text-sm text-neutral-600">External Reviewer</p>
+                    </div>
+                  </div>
+
+                  <!-- Email Invitation -->
+                  <div class="bg-neutral-50 p-4 rounded-lg mb-6">
+                    <div class="flex items-center justify-between mb-4">
+                      <span class="text-sm">Review Invitation</span>
+                      <span class="text-sm text-neutral-600"
+                        >Sent on April 15, 2025</span
+                      >
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <i class="fa-regular fa-envelope text-neutral-600"></i>
+                      <span class="text-sm">maryvanessa@example.com</span>
+                    </div>
+                  </div>
+
+                  <!-- Review Form -->
+                  <div class="space-y-4">
+                    <div>
+                      <label class="block text-sm mb-2"
+                        >Clarity Assessment</label
+                      >
+                      <div class="flex items-center space-x-4">
+                        <label class="flex items-center"
+                          ><input type="radio" name="clarity" class="mr-2" />
+                          1</label
+                        >
+                        <label class="flex items-center"
+                          ><input type="radio" name="clarity" class="mr-2" />
+                          2</label
+                        >
+                        <label class="flex items-center"
+                          ><input type="radio" name="clarity" class="mr-2" />
+                          3</label
+                        >
+                        <label class="flex items-center"
+                          ><input type="radio" name="clarity" class="mr-2" />
+                          4</label
+                        >
+                        <label class="flex items-center"
+                          ><input type="radio" name="clarity" class="mr-2" />
+                          5</label
+                        >
+                      </div>
+                    </div>
+
+                    <div>
+                      <label class="block text-sm mb-2">Comments</label>
+                      <textarea
+                        class="w-full p-3 border border-neutral-200 rounded-md"
+                        rows="4"
+                        placeholder="Add review comments..."
+                      ></textarea>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Action Buttons -->
-          <div
-            class="flex justify-between mt-8 pt-6 border-t border-neutral-200"
-          >
-            <button
-              type="button"
-              class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
+            <!-- Action Buttons -->
+            <div
+              class="flex justify-between mt-8 pt-6 border-t border-neutral-200"
             >
-              Back to Draft
-            </button>
-            <div class="space-x-4">
               <button
                 type="button"
                 class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
               >
-                Save Review
+                Back to Draft
               </button>
-              <a href="final-draft.html">
+              <div class="space-x-4">
                 <button
-                  type="submit"
-                  class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                  type="button"
+                  class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
                 >
-                  Submit Review
+                  Save Review
                 </button>
-              </a>
+                <a href="final-draft.html">
+                  <button
+                    type="submit"
+                    class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                  >
+                    Submit Review
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
