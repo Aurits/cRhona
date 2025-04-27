@@ -601,100 +601,41 @@
             </svg>
             <span class="ml-2 text-2xl text-neutral-900">cRhona</span>
           </div>
-          <h2 class="mt-6 text-3xl text-neutral-900">
-            Sign in to your account
-          </h2>
-          <p class="mt-2 text-neutral-600">
-            Welcome back! Please enter your details
-          </p>
+          <h2 class="mt-6 text-3xl text-neutral-900">Welcome to cRhona</h2>
+          <p class="mt-2 text-neutral-600">Sign in to access the platform</p>
         </div>
 
-        <!-- Login Form -->
+        <!-- Login Options -->
         <div class="bg-white p-8 rounded-xl shadow-lg">
-          <form
-            onsubmit="event.preventDefault(); window.location.href='dashboard.html';"
-          >
-            <div class="space-y-6">
-              <div>
-                <label class="block text-sm text-neutral-700 mb-2"
-                  >Email address</label
-                >
-                <input
-                  type="email"
-                  class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900"
-                  placeholder="Enter your email"
-                />
-              </div>
+          <a href="dashboard.html">
+            <button
+              class="w-full flex items-center justify-center px-4 py-3 border border-neutral-300 rounded-md hover:bg-neutral-50 mb-4"
+            >
+              <i class="fa-brands fa-google text-neutral-900"></i>
+              <span class="ml-2">Continue with Google</span>
+            </button>
+          </a>
 
-              <div>
-                <label class="block text-sm text-neutral-700 mb-2"
-                  >Password</label
-                >
-                <input
-                  type="password"
-                  class="w-full px-4 py-2 border border-neutral-300 rounded-md focus:ring-2 focus:ring-neutral-900 focus:border-neutral-900"
-                  placeholder="Enter your password"
-                />
-              </div>
-
-              <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                  <input
-                    type="checkbox"
-                    class="h-4 w-4 text-neutral-900 border-neutral-300 rounded"
-                  />
-                  <label class="ml-2 text-sm text-neutral-600"
-                    >Remember me</label
-                  >
-                </div>
-                <span
-                  class="text-sm text-neutral-900 hover:underline cursor-pointer"
-                  >Forgot password?</span
-                >
-              </div>
-
-              <button
-                type="submit"
-                class="w-full py-3 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
-              >
-                Sign in
-              </button>
+          <div class="relative my-6">
+            <div class="absolute inset-0 flex items-center">
+              <div class="w-full border-t border-neutral-300"></div>
             </div>
-          </form>
-
-          <!-- Social Login -->
-          <div class="mt-6">
-            <div class="relative">
-              <div class="absolute inset-0 flex items-center">
-                <div class="w-full border-t border-neutral-300"></div>
-              </div>
-              <div class="relative flex justify-center text-sm">
-                <span class="px-2 bg-white text-neutral-600"
-                  >Or continue with</span
-                >
-              </div>
-            </div>
-
-            <div class="mt-6 grid grid-cols-2 gap-4">
-              <button
-                class="flex items-center justify-center px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
-              >
-                <i class="fa-brands fa-google text-neutral-900"></i>
-                <span class="ml-2">Google</span>
-              </button>
-              <button
-                class="flex items-center justify-center px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
-              >
-                <i class="fa-brands fa-microsoft text-neutral-900"></i>
-                <span class="ml-2">Microsoft</span>
-              </button>
+            <div class="relative flex justify-center text-sm">
+              <span class="px-2 bg-white text-neutral-600">Or</span>
             </div>
           </div>
+          <a href="dashboard.html">
+            <button
+              class="w-full py-3 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+            >
+              Continue as Guest
+            </button>
+          </a>
         </div>
 
-        <!-- Sign Up Link -->
+        <!-- Help Text -->
         <p class="mt-8 text-center text-sm text-neutral-600">
-          Don't have an account?
+          Need an account?
           <span class="text-neutral-900 hover:underline cursor-pointer"
             >Request access</span
           >
