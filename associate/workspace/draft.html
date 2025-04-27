@@ -854,133 +854,428 @@
               </div>
             </div>
 
-            <!-- Template Builder -->
+            <!-- Template Builder with collapsible sections -->
             <div class="space-y-6">
-              <!-- Executive Summary -->
-              <div class="bg-white rounded-lg border border-neutral-200 p-6">
-                <label class="block text-sm text-neutral-700 mb-4"
-                  >Executive Summary</label
+              <!-- Header Information -->
+              <div class="bg-white rounded-lg border border-neutral-200">
+                <button
+                  class="w-full p-6 flex justify-between items-center hover:bg-neutral-50"
                 >
-                <div class="prose max-w-none">
-                  <textarea
-                    class="w-full p-4 border border-neutral-300 rounded-md min-h-[200px]"
-                    placeholder="Write your executive summary..."
-                  ></textarea>
+                  <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-file-lines text-neutral-700"></i>
+                    <h3 class="text-lg">Header Information</h3>
+                  </div>
+                  <i class="fa-solid fa-chevron-down text-neutral-500"></i>
+                </button>
+                <div class="p-6 pt-0">
+                  <div class="flex justify-between items-center mb-4">
+                    <span class="text-sm">Rapid Response Brief</span>
+                    <div class="flex items-center space-x-4">
+                      <span class="text-sm text-neutral-600"
+                        >Last updated:</span
+                      >
+                      <input
+                        type="date"
+                        class="px-3 py-1 border border-neutral-300 rounded-md"
+                        value="2025-04-27"
+                        readonly
+                      />
+                    </div>
+                  </div>
+                  <div class="mt-4">
+                    <label class="block text-sm text-neutral-700 mb-2"
+                      >Main Question (From Step 3)</label
+                    >
+                    <textarea
+                      class="w-full p-4 border border-neutral-200 rounded-md bg-neutral-50"
+                      rows="2"
+                      readonly
+                    >
+What are the most effective interventions for reducing maternal mortality in rural settings of developing countries?</textarea
+                    >
+                  </div>
                 </div>
               </div>
 
-              <!-- Problem Definition -->
-              <div class="bg-white rounded-lg border border-neutral-200 p-6">
-                <label class="block text-sm text-neutral-700 mb-4"
-                  >Problem Definition</label
-                >
-                <div class="prose max-w-none">
-                  <textarea
-                    class="w-full p-4 border border-neutral-300 rounded-md min-h-[150px]"
-                    placeholder="Define the problem..."
-                  ></textarea>
+              <!-- Sections Grid -->
+              <div class="grid grid-cols-2 gap-6">
+                <!-- Left Column -->
+                <div class="space-y-6">
+                  <!-- Short Summary -->
+                  <div class="bg-white rounded-lg border border-neutral-200">
+                    <button
+                      class="w-full p-6 flex justify-between items-center hover:bg-neutral-50"
+                    >
+                      <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-list text-neutral-700"></i>
+                        <h3 class="text-lg">Short Summary</h3>
+                      </div>
+                      <i class="fa-solid fa-chevron-down text-neutral-500"></i>
+                    </button>
+                    <div class="p-6 pt-0">
+                      <textarea
+                        class="w-full p-4 border border-neutral-300 rounded-md"
+                        rows="4"
+                      >
+This rapid response brief synthesizes evidence on maternal mortality interventions in rural settings, highlighting key strategies and their effectiveness based on current research findings.</textarea
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Background & Question -->
+                  <div class="bg-white rounded-lg border border-neutral-200">
+                    <button
+                      class="w-full p-6 flex justify-between items-center hover:bg-neutral-50"
+                    >
+                      <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-book text-neutral-700"></i>
+                        <h3 class="text-lg">Background</h3>
+                      </div>
+                      <i class="fa-solid fa-chevron-down text-neutral-500"></i>
+                    </button>
+                    <div class="p-6 pt-0 space-y-4">
+                      <div>
+                        <label class="block text-sm text-neutral-700 mb-2"
+                          >Context (From Step 3)</label
+                        >
+                        <textarea
+                          class="w-full p-4 border border-neutral-200 rounded-md bg-neutral-50"
+                          rows="3"
+                          readonly
+                        >
+Maternal mortality remains a significant public health challenge in rural areas of developing countries.</textarea
+                        >
+                      </div>
+                      <div>
+                        <label class="block text-sm text-neutral-700 mb-2"
+                          >Problem Statement</label
+                        >
+                        <textarea
+                          class="w-full p-4 border border-neutral-300 rounded-md"
+                          rows="3"
+                        >
+Despite global efforts, rural areas continue to experience high maternal mortality rates.</textarea
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="space-y-6">
+                  <!-- PICO Framework -->
+                  <div class="bg-white rounded-lg border border-neutral-200">
+                    <button
+                      class="w-full p-6 flex justify-between items-center hover:bg-neutral-50"
+                    >
+                      <div class="flex items-center space-x-3">
+                        <i
+                          class="fa-solid fa-diagram-project text-neutral-700"
+                        ></i>
+                        <h3 class="text-lg">PICO Framework</h3>
+                      </div>
+                      <i class="fa-solid fa-chevron-down text-neutral-500"></i>
+                    </button>
+                    <div class="p-6 pt-0 grid grid-cols-1 gap-4">
+                      <div class="space-y-2">
+                        <label class="block text-sm">Population</label>
+                        <textarea class="w-full p-3 border rounded-md" rows="2">
+Pregnant women in rural areas</textarea
+                        >
+                      </div>
+                      <div class="space-y-2">
+                        <label class="block text-sm">Intervention</label>
+                        <textarea class="w-full p-3 border rounded-md" rows="2">
+Community-based maternal health programs</textarea
+                        >
+                      </div>
+                      <div class="space-y-2">
+                        <label class="block text-sm">Comparison</label>
+                        <textarea class="w-full p-3 border rounded-md" rows="2">
+Standard care without specialized interventions</textarea
+                        >
+                      </div>
+                      <div class="space-y-2">
+                        <label class="block text-sm">Outcomes</label>
+                        <textarea class="w-full p-3 border rounded-md" rows="2">
+Maternal mortality rates, complications, facility-based deliveries</textarea
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Methods -->
+                  <div class="bg-white rounded-lg border border-neutral-200">
+                    <button
+                      class="w-full p-6 flex justify-between items-center hover:bg-neutral-50"
+                    >
+                      <div class="flex items-center space-x-3">
+                        <i
+                          class="fa-solid fa-magnifying-glass text-neutral-700"
+                        ></i>
+                        <h3 class="text-lg">Methods</h3>
+                      </div>
+                      <i class="fa-solid fa-chevron-down text-neutral-500"></i>
+                    </button>
+                    <div class="p-6 pt-0">
+                      <div class="bg-neutral-50 p-4 rounded-md space-y-2">
+                        <p class="text-sm">
+                          Databases: PubMed, Cochrane Library
+                        </p>
+                        <p class="text-sm">Date range: 2020-2025</p>
+                        <p class="text-sm">
+                          Keywords: maternal mortality, rural health
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <!-- Key Findings -->
-              <div class="bg-white rounded-lg border border-neutral-200 p-6">
-                <div class="flex justify-between items-center mb-4">
-                  <label class="block text-sm text-neutral-700"
-                    >Key Findings</label
+              <!-- Bottom Action Bar -->
+              <div
+                class="fixed bottom-0 left-0 right-0 bg-white border-t border-neutral-200 p-4"
+              >
+                <div
+                  class="max-w-7xl mx-auto flex justify-between items-center"
+                >
+                  <button
+                    class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
                   >
-                  <button class="text-neutral-600 hover:text-neutral-900">
-                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-arrow-left mr-2"></i>Back
                   </button>
-                </div>
-                <div class="space-y-3">
-                  <div class="flex items-start space-x-3">
-                    <div class="flex-shrink-0 mt-1">
-                      <i class="fa-solid fa-grip-vertical text-neutral-400"></i>
-                    </div>
-                    <textarea
-                      class="flex-1 p-3 border border-neutral-300 rounded-md"
-                      rows="2"
+                  <div class="flex items-center space-x-4">
+                    <button
+                      class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
                     >
-  Finding 1: Implementation of evidence-based interventions showed positive outcomes across 75% of studies.</textarea
+                      <i class="fa-regular fa-eye mr-2"></i>Preview
+                    </button>
+                    <button
+                      class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
                     >
-                  </div>
-                  <div class="flex items-start space-x-3">
-                    <div class="flex-shrink-0 mt-1">
-                      <i class="fa-solid fa-grip-vertical text-neutral-400"></i>
-                    </div>
-                    <textarea
-                      class="flex-1 p-3 border border-neutral-300 rounded-md"
-                      rows="2"
-                    >
-  Finding 2: Cost-effectiveness analysis indicates potential savings of 30% in resource allocation.</textarea
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <!-- Policy Options -->
-              <div class="bg-white rounded-lg border border-neutral-200 p-6">
-                <label class="block text-sm text-neutral-700 mb-4"
-                  >Policy Options</label
-                >
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div
-                    class="border border-neutral-200 rounded-lg p-4 cursor-move"
-                  >
-                    <div class="flex justify-between items-center mb-2">
-                      <span>Option A</span>
-                      <i class="fa-solid fa-grip-vertical text-neutral-400"></i>
-                    </div>
-                    <textarea
-                      class="w-full p-3 border border-neutral-300 rounded-md"
-                      rows="3"
-                    >
-  Implement comprehensive monitoring system</textarea
-                    >
-                  </div>
-                  <div
-                    class="border border-neutral-200 rounded-lg p-4 cursor-move"
-                  >
-                    <div class="flex justify-between items-center mb-2">
-                      <span>Option B</span>
-                      <i class="fa-solid fa-grip-vertical text-neutral-400"></i>
-                    </div>
-                    <textarea
-                      class="w-full p-3 border border-neutral-300 rounded-md"
-                      rows="3"
-                    >
-  Enhance capacity building programs</textarea
-                    >
+                      <i class="fa-regular fa-save mr-2"></i>Save Draft
+                    </button>
+                    <a href="internal-review.html">
+                      <button
+                        class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                      >
+                        Continue<i class="fa-solid fa-arrow-right ml-2"></i>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Action Buttons -->
-            <div
-              class="flex justify-between mt-8 pt-6 border-t border-neutral-200"
-            >
-              <button
-                type="button"
-                class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
-              >
-                Back to Synthesis
-              </button>
-              <div class="space-x-4">
+            <!-- Summary of Findings -->
+            <div class="col-span-2 space-y-6">
+              <!-- Summary of Findings -->
+              <div class="bg-white rounded-lg border border-neutral-200">
                 <button
-                  type="button"
-                  class="px-4 py-2 border border-neutral-300 rounded-md hover:bg-neutral-50"
+                  class="w-full p-6 flex justify-between items-center hover:bg-neutral-50"
                 >
-                  Save Draft
+                  <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-chart-bar text-neutral-700"></i>
+                    <h3 class="text-lg">Summary of Findings</h3>
+                  </div>
+                  <i class="fa-solid fa-chevron-down text-neutral-500"></i>
                 </button>
-                <a href="internal-review.html">
-                  <button
-                    type="submit"
-                    class="px-4 py-2 bg-neutral-900 text-white rounded-md hover:bg-neutral-800"
+                <div class="p-6 pt-0 space-y-6">
+                  <textarea
+                    class="w-full p-4 border border-neutral-300 rounded-md"
+                    rows="4"
                   >
-                    Continue to Review
-                  </button>
-                </a>
+Analysis of current evidence shows significant impact of community-based interventions in reducing maternal mortality rates in rural settings.</textarea
+                  >
+
+                  <!-- Evidence Table -->
+                  <div class="overflow-x-auto">
+                    <table
+                      class="w-full border-collapse border border-neutral-200"
+                    >
+                      <thead class="bg-neutral-50">
+                        <tr>
+                          <th class="p-4 text-left border border-neutral-200">
+                            Outcomes
+                          </th>
+                          <th class="p-4 text-left border border-neutral-200">
+                            Impact
+                          </th>
+                          <th class="p-4 text-left border border-neutral-200">
+                            Number of Studies
+                          </th>
+                          <th class="p-4 text-left border border-neutral-200">
+                            Quality (GRADE)
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="p-4 border border-neutral-200">
+                            Maternal Mortality
+                          </td>
+                          <td class="p-4 border border-neutral-200">
+                            45% reduction
+                          </td>
+                          <td class="p-4 border border-neutral-200">12</td>
+                          <td class="p-4 border border-neutral-200">High</td>
+                        </tr>
+                        <tr>
+                          <td class="p-4 border border-neutral-200">
+                            Facility Births
+                          </td>
+                          <td class="p-4 border border-neutral-200">
+                            60% increase
+                          </td>
+                          <td class="p-4 border border-neutral-200">8</td>
+                          <td class="p-4 border border-neutral-200">
+                            Moderate
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Evidence Quality Assessment -->
+              <div class="bg-white rounded-lg border border-neutral-200">
+                <button
+                  class="w-full p-6 flex justify-between items-center hover:bg-neutral-50"
+                >
+                  <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-check-double text-neutral-700"></i>
+                    <h3 class="text-lg">Evidence Quality Assessment</h3>
+                  </div>
+                  <i class="fa-solid fa-chevron-down text-neutral-500"></i>
+                </button>
+                <div class="p-6 pt-0">
+                  <textarea
+                    class="w-full p-4 border border-neutral-300 rounded-md"
+                    rows="4"
+                  >
+Evidence quality was assessed using GRADE methodology. Most studies showed high methodological quality with consistent results across different contexts.</textarea
+                  >
+                </div>
+              </div>
+
+              <!-- Relevance Assessment -->
+              <div class="bg-white rounded-lg border border-neutral-200">
+                <button
+                  class="w-full p-6 flex justify-between items-center hover:bg-neutral-50"
+                >
+                  <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-scale-balanced text-neutral-700"></i>
+                    <h3 class="text-lg">Relevance Assessment</h3>
+                  </div>
+                  <i class="fa-solid fa-chevron-down text-neutral-500"></i>
+                </button>
+                <div class="p-6 pt-0">
+                  <div class="overflow-x-auto">
+                    <table
+                      class="w-full border-collapse border border-neutral-200"
+                    >
+                      <thead class="bg-neutral-50">
+                        <tr>
+                          <th class="p-4 text-left border border-neutral-200">
+                            Category
+                          </th>
+                          <th class="p-4 text-left border border-neutral-200">
+                            Findings
+                          </th>
+                          <th class="p-4 text-left border border-neutral-200">
+                            Interpretation
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="p-4 border border-neutral-200">
+                            Applicability
+                          </td>
+                          <td class="p-4 border border-neutral-200">
+                            High relevance to rural settings
+                          </td>
+                          <td class="p-4 border border-neutral-200">
+                            Directly applicable to target population
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="p-4 border border-neutral-200">Equity</td>
+                          <td class="p-4 border border-neutral-200">
+                            Addresses key disparities
+                          </td>
+                          <td class="p-4 border border-neutral-200">
+                            Potential to reduce health inequities
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="p-4 border border-neutral-200">
+                            Cost considerations
+                          </td>
+                          <td class="p-4 border border-neutral-200">
+                            Moderate resource requirements
+                          </td>
+                          <td class="p-4 border border-neutral-200">
+                            Cost-effective for rural implementation
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Conclusion -->
+              <div class="bg-white rounded-lg border border-neutral-200">
+                <button
+                  class="w-full p-6 flex justify-between items-center hover:bg-neutral-50"
+                >
+                  <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-flag-checkered text-neutral-700"></i>
+                    <h3 class="text-lg">Conclusion</h3>
+                  </div>
+                  <i class="fa-solid fa-chevron-down text-neutral-500"></i>
+                </button>
+                <div class="p-6 pt-0">
+                  <textarea
+                    class="w-full p-4 border border-neutral-300 rounded-md"
+                    rows="4"
+                  >
+Community-based interventions show strong evidence of effectiveness in reducing maternal mortality in rural settings, with high applicability and potential for sustainable implementation.</textarea
+                  >
+                </div>
+              </div>
+
+              <!-- References -->
+              <div class="bg-white rounded-lg border border-neutral-200">
+                <button
+                  class="w-full p-6 flex justify-between items-center hover:bg-neutral-50"
+                >
+                  <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-book text-neutral-700"></i>
+                    <h3 class="text-lg">References</h3>
+                  </div>
+                  <i class="fa-solid fa-chevron-down text-neutral-500"></i>
+                </button>
+                <div class="p-6 pt-0">
+                  <ol
+                    class="list-decimal list-inside space-y-2 text-sm text-neutral-700"
+                  >
+                    <li>
+                      WHO. (2025). Global strategy for women's health. Geneva:
+                      World Health Organization.
+                    </li>
+                    <li>
+                      Claver, P., et al. (2024). Community interventions for
+                      maternal health. The Lancet, 395(10223), 447-456.
+                    </li>
+                    <li>
+                      Alanda, A. (2025). Rural healthcare accessibility. Health
+                      Policy and Planning, 40(2), 112-124.
+                    </li>
+                  </ol>
+                </div>
               </div>
             </div>
           </div>
