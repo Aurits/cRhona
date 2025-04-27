@@ -646,7 +646,36 @@
           id="header"
           class="h-[72px] bg-white border-b border-neutral-200 fixed w-[calc(100%-256px)] z-10"
         >
-          <!-- Previous header content remains unchanged -->
+          <div class="flex items-center justify-between h-full px-6">
+            <div class="flex items-center">
+              <i class="fa-solid fa-magnifying-glass text-neutral-400"></i>
+              <input
+                type="text"
+                placeholder="Search..."
+                class="ml-2 px-4 py-2 bg-neutral-100 rounded-lg"
+              />
+            </div>
+            <div class="flex items-center space-x-4">
+              <button class="relative">
+                <i class="fa-regular fa-bell text-xl"></i>
+                <span
+                  class="absolute -top-1 -right-1 bg-neutral-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center"
+                  >3</span
+                >
+              </button>
+              <button class="relative">
+                <i class="fa-regular fa-circle-question text-xl"></i>
+              </button>
+              <div class="flex items-center">
+                <img
+                  src="https://api.dicebear.com/7.x/notionists/svg?scale=200&seed=Mary"
+                  alt="Mary Vanessa"
+                  class="w-8 h-8 rounded-full"
+                />
+                <span class="ml-2">Mary Vanessa</span>
+              </div>
+            </div>
+          </div>
         </header>
 
         <!-- Settings Content -->
